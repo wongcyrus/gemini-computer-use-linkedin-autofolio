@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio & HKUST CS Recommendation — Hiu Tung Cheung (Esther)</title>
+    <style>
+        :root {
+            --primary: #003366;
+            --accent: #b8860b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --muted: #64748b;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #002147 0%, #004080 100%);
+            color: #fff;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        header h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; }
+        header p { margin: 0.25rem 0; opacity: 0.9; font-size: 1.05rem; }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem; }
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.25rem;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.25rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--primary);
+        }
+        .badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            margin-bottom: 0.5rem;
+        }
+        .meta { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.75rem; }
+        .relevance {
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px dashed #e2e8f0;
+            font-size: 0.9rem;
+            color: #0f172a;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+        .media-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .media-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            background: #e2e8f0;
+        }
+        .screenshot-card img {
+            object-fit: contain;
+            height: 260px;
+            background: #0f172a;
+        }
+        .media-card figcaption {
+            padding: 0.9rem;
+            font-size: 0.9rem;
+        }
+        .letter-box {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            white-space: pre-wrap;
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.75;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hiu Tung Cheung (Esther / 張曉彤)</h1>
+        <p>AWS Student Builder Group Leader &bull; GDG on Campus Leader &bull; Red Hat Student Ambassador @ HKIIT</p>
+        <p>Higher Diploma in Cloud and Data Centre Administration (CGPA: 3.91 / 4.0) &rarr; HKUST Computer Science Portfolio</p>
+    </header>
+    <div class="container">
+        <h2>1. HKUST Computer Science Recommendation Letter</h2>
+        <div class="letter-box">Here is the formal academic recommendation letter along with a complementary LinkedIn recommendation.
+
+***
+
+# PART A: Formal Academic Recommendation Letter
+
+**Department of Information Technology**  
+**Hong Kong Institute of Information Technology (HKIIT) / IVE (Lee Wai Lee)**  
+Vocational Training Council, Hong Kong SAR  
+Email: cyruswong@vtc.edu.hk | Web: https://hkiit.edu.hk  
+
+November 18, 2026  
+
+**Admissions Committee**  
+Department of Computer Science and Engineering (CSE)  
+The Hong Kong University of Science and Technology (HKUST)  
+Clear Water Bay, Kowloon, Hong Kong  
+
+**Subject: Strongest Recommendation for Hiu Tung Cheung (Esther / 張曉彤) — Bachelor of Engineering in Computer Science (BEng in CS)**
+
+Dear Members of the Admissions Committee,
+
+I am writing this letter with the highest degree of conviction to recommend **Hiu Tung Cheung (Esther / 張曉彤)** for direct-entry admission to the **Bachelor of Engineering in Computer Science (BEng in CS)** program at The Hong Kong University of Science and Technology (HKUST). 
+
+I write from the dual perspective of her academic lecturer, research mentor, and technical co-presenter. As a Senior Lecturer in the Department of Information Technology at the Hong Kong Institute of Information Technology (HKIIT) / IVE (Lee Wai Lee) and an AWS Machine Learning &amp; AI Hero, I have taught hundreds of aspiring software and cloud engineers over the past two decades. Esther stands at the absolute pinnacle of that cohort. Enrolled in our flagship **Higher Diploma in Cloud and Data Centre Administration**, she maintains a near-flawless **Cumulative GPA of 3.91 / 4.0**. Beyond her scholastic perfection, Esther possesses the rare engineering maturity to translate complex theoretical abstractions into industrial-grade, cloud-native distributed systems and applied artificial intelligence solutions.
+
+### 1. Cloud-Native Distributed Systems Mastery &amp; PyCon Hong Kong 2026
+Esther’s grasp of systems programming, container orchestration, and asynchronous protocols matches that of senior university undergraduates. I invited Esther to co-author and co-deliver an invited technical paper with me and Arthur Chin at **PyCon Hong Kong 2026**, titled:  
+*「從港域時空到 Kubernetes: 將香港遊戲世界化身雲原生學習平台」 (From Hong Kong Zero to Kubernetes: Transforming a Hong Kong Gaming World into a Cloud-Native Learning Platform)*.
+
+In this project, Esther was central to engineering the bridge connecting *Hong Kong Zero* (an immersive 3D open-world environment) to enterprise Kubernetes clusters. She designed a high-throughput, low-latency event bus where in-game actions trigger asynchronous deployment and configuration verification tasks inside live container pods. Her architecture relied on **duplex WebSockets communication**, **Python finite state machines (FSM)**, and **serverless event-driven pipelines** that trace container lifecycle metrics, evaluate student infrastructure state machines, and stream dynamic grading telemetry back into the game engine in real time. Her command of distributed state orchestration was further underscored when she live-demonstrated running *DOOM* distributed across a Kubernetes cluster (`#doom × #k8s`) at both the AWS User Group Hong Kong and regional conferences.
+
+### 2. Frontier Applied AI: Embodied Robotics, Computer Vision, and Microsoft Partnership
+Esther does not merely consume developer APIs; she designs integrated AI architectures to solve real-world problems:
+* **Embodied AI &amp; Cloud Robotics (AWS Summit Hong Kong 2026):** Esther presented in the AWS Summit Developer Zone on *&quot;What Happens When an AI Agent Takes Control of a Robot? [LIT-001]&quot;*. She architected an embodied agentic workflow where Large Language Models (LLMs) break down unstructured visual and telemetry inputs into deterministic control primitives executed by physical micro-controllers over low-latency cloud connections.
+* **Open Source Computer Vision (HKOSCon 2026):** At the Hong Kong Open Source Conference, Esther presented *&quot;真出席 ProvePresent - AI防代打卡點名方案&quot;*, a biometric authentication and anti-proxy attendance platform she architected using Microsoft Azure AI Vision, vector embeddings, and multi-factor verification to systematically eliminate academic fraud.
+* **Institutional Representation (VTC × Microsoft Hong Kong Strategic Partnership):** Recognized for her technical poise, Esther was selected as the sole student keynote presenter for the official **VTC × Microsoft Hong Kong MoU Signing Ceremony**, where she demonstrated both *ProvePresent* and the *AI Virtual Tutor* before corporate executives and university leadership.
+* **On-Device Agentic Workflows:** At Google Hong Kong’s office for the *&quot;GDGHK Build with AI&quot;* summit, she delivered technical workshops on *On-Device Intelligence &amp; Agentic Web*, executing local small language models (SLMs) with client-side agent tool-calling frameworks.
+
+### 3. Academic Distinction, Scholarships, and Regional Competition Honors
+Esther’s academic track record is distinguished by competitive institutional scholarships and regional innovation championships across the Greater Bay Area (GBA):
+* **Prestigious Scholarships:** Awarded both the competitive **Lei Foundation Scholarship** (recognizing elite institutional talent in computing) and **The Cathay Group Scholarship 2025/26** (awarded jointly by Cathay and VTC to top-tier engineering talent).
+* **Competitive System Development:** 
+  * **First Prize (一等獎) &amp; Outstanding Teamwork Award** at the *10th GBA Greater Bay Area IT Application System Development Competition* for the `A-Eye` artificial intelligence vision system.
+  * **Finals Second Prize (決賽二等獎)** at the *9th GBA IT Application Competition* for an autonomous driving safety inspection system (*AI全自動無人駕駛安全監管官*).
+  * **Silver Award (Tertiary ICT)** at the *8th GBA Digital Education STEAM Excellence Award 2026*.
+  * **Gold Award** at the *CLP Energy Saving and Low Carbon Creation Tomorrow Competition 2024* for her assistive IoT/AI energy analytics deployment.
+  * **Innovation Award** at the HKSAR Government’s *2nd City I&amp;T Grand Challenge*, organized by the Innovation and Technology Commission (ITC).
+
+### 4. Technical Credentials &amp; Unrivaled Campus Leadership
+Esther holds **16 verified technical certifications and skill badges**, demonstrating an extraordinary range across all three hyperscalers and enterprise Linux:
+* **Google Cloud &amp; Containers:** *Optimize Costs for Google Kubernetes Engine (GKE)*, *Getting Started with GKE*, *Google Cloud Fundamentals: Core Infrastructure*, and *Essential Cloud Infrastructure: Foundations &amp; Core Services*.
+* **Red Hat Enterprise Architecture:** *Red Hat System Administration I (RH124)*, *Red Hat Enterprise Linux Automation with Ansible (RH294)*, *Red Hat OpenShift Development I: Introduction to Containers with Podman (DO188)*, and *OpenStack Administration I (CL110)*.
+* **Amazon Web Services:** *AWS Certified Cloud Practitioner*, alongside official AWS Academy Graduate accreditations in *Cloud Developing*, *Cloud Operations*, *Cloud Architecting*, and *Cloud Foundations*.
+
+Simultaneously, Esther is a catalyst for institutional change. She holds the unprecedented distinction of serving concurrently as the **Inaugural AWS Student Builder Group Leader &#x27;26 (HKIIT)**, the **Google Developer Group (GDG) on Campus Leader**, and the **first official Red Hat Student Ambassador in Hong Kong**, an initiative that propelled HKIIT to achieve *Premier Tier* status in the Red Hat Academy Excellence Program. Despite this exhaustive workload, she regularly dedicates weekends to teaching generative AI literacy to non-technical elderly citizens through community workshops organized with CLP Power.
+
+### Summary
+The Department of Computer Science and Engineering at HKUST is internationally celebrated for academic rigor, algorithmic foundations, and cutting-edge systems research. Esther Cheung embodies the intellectual resilience, engineering discipline, and collaborative leadership that HKUST values most. She has mastered container runtimes, distributed cloud patterns, and applied AI at a level seldom observed in transfer applicants. 
+
+I give **Hiu Tung Cheung (Esther)** my highest, most enthusiastic, and unreserved recommendation. She will not only excel in your Computer Science curriculum but will emerge as an intellectual and community leader within the CSE department. Please feel free to contact me should you require any additional supporting documentation.
+
+Sincerely,
+
+```
+[Signature]
+```
+
+**Cyrus Wong (黃俊彥)**  
+Senior Lecturer, Department of Information Technology  
+Leader, Cloud Innovation Centre  
+Hong Kong Institute of Information Technology (HKIIT) / IVE (Lee Wai Lee)  
+AWS Machine Learning Hero | AWS AI Hero  
+Email: cyruswong@vtc.edu.hk  
+Tel: +852 3928 2000  
+
+***
+
+# PART B: Endorsement for Esther’s LinkedIn Profile
+
+**Recommendation by Cyrus Wong (黃俊彥) for Hiu Tung Cheung (Esther / 張曉彤):**
+
+&gt; &quot;It is rare to encounter a student who blends academic brilliance, low-level systems engineering, and community leadership as seamlessly as Esther (Hiu Tung) Cheung.
+&gt; 
+&gt; As her lecturer and mentor at HKIIT / IVE, I have had the privilege of observing Esther’s exceptional trajectory. In the classroom, her near-perfect **3.91 / 4.0 CGPA** in Cloud and Data Centre Administration speaks to her rigorous work ethic. But her real distinction lies in her ability to architect production-ready, mission-critical systems.
+&gt; 
+&gt; I invited Esther to co-present alongside me at **PyCon Hong Kong 2026**, where we detailed how we transformed the *Hong Kong Zero* open-world 3D environment into a cloud-native educational platform (*「從港域時空到 Kubernetes」*). Esther’s design integrated real-time WebSockets, Python finite state machines, serverless pipelines, and live Kubernetes verification checks with extraordinary architectural poise. Her technical scope spans the entire cloud ecosystem: from presenting embodied robotics AI agents at **AWS Summit Hong Kong**, to architecting her Azure computer vision anti-proxy system (*ProvePresent*) at **HKOSCon**, to presenting before executive leadership at the official **VTC × Microsoft Hong Kong Strategic Partnership Ceremony**, and delivering live multi-agent sessions at Google Hong Kong.
+&gt; 
+&gt; Holding 16 professional certifications across AWS, Red Hat (Ansible, Podman/OpenShift, OpenStack, RHCSA), and Google Cloud (GKE Optimization), she is equally unmatched as a builder of communities. As HKIIT’s **1st AWS Student Builder Group Leader**, **GDG on Campus Leader**, and **Hong Kong’s first Red Hat Student Ambassador**, she has empowered hundreds of her peers to write code, deploy containers, and pass industry certifications.
+&gt; 
+&gt; Winner of the **Cathay Group Scholarship**, the **Lei Foundation Scholarship**, and championships across the Greater Bay Area IT Competitions, Esther represents the absolute top echelon of young computer science talent in Hong Kong. She has my highest recommendation for university admission and any elite engineering team.&quot;</div>
+
+        <h2>2. Traced Achievements, Talks, Awards & Leadership (13)</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <div class="badge">Community Leadership</div>
+                <h3>Cloud &amp; Community Leadership (GDG, AWS Student Builder, Red Hat Ambassador)</h3>
+                <div class="meta">HKIIT / IVE / GDG / AWS / Red Hat &bull; Present</div>
+                <p>Focus on cloud technologies including AWS, Google Cloud, Linux, containers, and Kubernetes. Active as a Google Developer Group on Campus Leader, AWS Student Builder Group Leader, and Red Hat Student Ambassador at HKIIT. Features prominent institutional collaboration with Microsoft Hong Kong and HKIIT video promotions.</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Demonstrates exceptional tech leadership, strong cloud and systems engineering foundation (AWS, GCP, Linux, Kubernetes), and proven community outreach capabilities directly aligned with HKUST CS.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Academic Background</div>
+                <h3>Higher Diploma in Cloud and Data Centre Administration (CGPA 3.91/4.0)</h3>
+                <div class="meta">Hong Kong Institute of Vocational Education (IVE) - Lee Wai Lee / HKIIT &bull; 2025 - Present</div>
+                <p>Higher Diploma in Cloud and Data Centre Administration, Cloud Computing at Hong Kong Institute of Vocational Education (IVE) - Lee Wai Lee / HKIIT. Academic Grade: CGPA 3.91 / 4.0. Top academic performer.</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Exceptional academic standing (CGPA 3.91/4) proving rigorous academic excellence and readiness for HKUST Computer Science curriculum.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Conference &amp; Research</div>
+                <h3>What Happens When an AI Agent Takes Control of a Robot? (AWS Summit HK)</h3>
+                <div class="meta">AWS Summit Hong Kong &bull; Jun 17, 2026</div>
+                <p>Conference presentation at AWS Summit Hong Kong titled &#x27;What Happens When an AI Agent Takes Control of a Robot?&#x27;. Explores whether an AI agent can fully operate and guide physical robot behavior, integrating cloud robotics, LLM reasoning, and real-time execution.</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Exemplifies innovative research at the intersection of AI Agents, Robotics, and Cloud Systems, areas of deep research focus at HKUST CS.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Conference &amp; Research</div>
+                <h3>ProvePresent - AI Anti-Proxy Attendance Solution (HKOSCon 2026)</h3>
+                <div class="meta">Hong Kong Open Source Conference (HKOSCon) &bull; Jun 6, 2026</div>
+                <p>Conference presentation at Hong Kong Open Source Conference (HKOSCon 2026) titled &#x27;真出席 ProvePresent - AI防代打卡點名方案&#x27;. Built on Microsoft Azure core cloud infrastructure to eliminate proxy attendance in academic institutions using computer vision and verification.</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Demonstrates practical cloud architecture, applied AI system design, open source contribution, and high-impact software engineering skills directly relevant to HKUST CS.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Conference &amp; Research</div>
+                <h3>Speaker at PyCon HK 2026: From Hong Kong Zero to Kubernetes Cloud-Native Learning Platform</h3>
+                <div class="meta">PyCon Hong Kong 2026 &bull; Nov 14, 2026</div>
+                <p>Co-speaker alongside Cyrus Wong and Arthur Chin presenting &#x27;從港域時空到 Kubernetes: 將香港遊戲世界化身雲原生學習平台&#x27; (From Hong Kong Zero to Kubernetes: Transforming a Hong Kong Gaming World into a Cloud-Native Learning Platform). Explores how Hong Kong Zero becomes a cloud-native educational platform, turning interactive in-game quests/events into real Kubernetes cluster configuration verification tasks and streaming back execution results via WebSockets. Technical architecture leverages Python state machines, serverless event-driven pipelines, and long-running automated assessment workflows.</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Demonstrates advanced practical mastery of cloud-native computing, distributed systems orchestration (Kubernetes), real-time protocols (WebSockets), Python asynchronous programming, and software engineering architecture. Proves capability to deliver technical conference presentations and design scalable gamified learning platforms.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Honors &amp; Scholarships</div>
+                <h3>Lei Foundation Scholarship</h3>
+                <div class="meta">The Lei Foundation Limited &bull; Oct 2026</div>
+                <p>Awarded by The Lei Foundation Limited in recognition of academic excellence, talent development, and leadership at HKIIT / Hong Kong Institute of Vocational Education (IVE) - Lee Wai Lee. #hkiit #leifoundation #leigarden #scholarship #studentachievement #talentdevelopment</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Demonstrates outstanding academic distinction, student achievement, and institutional recognition in information technology.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Honors &amp; Scholarships</div>
+                <h3>The Cathay Group Scholarship 2025/26</h3>
+                <div class="meta">The Cathay Group &amp; Vocational Training Council &bull; Sep 2026</div>
+                <p>The Cathay Group Scholarship is a joint initiative established by the Cathay Group and the Vocational Training Council (VTC). It is designed to recognize and reward outstanding VTC students pursuing careers in aviation and technology. Associated with Hong Kong Institute of Vocational Education (IVE) - Lee Wai Lee.</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Prestigious industry-backed scholarship recognizing top-tier technological competence, innovation, and leadership potential in technology and aviation systems.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Honors &amp; Scholarships</div>
+                <h3>The 8th Greater Bay Area Digital Education STEAM Excellence Award 2026 (Tertiary ICT) - Silver Award</h3>
+                <div class="meta">The 8th Greater Bay Area Digital Education STEAM Excellence Award 2026 &bull; Aug 2026</div>
+                <p>Won Silver Award in the Tertiary ICT category at The 8th Greater Bay Area Digital Education STEAM Excellence Award 2026. Recognizes excellence in software engineering, digital education innovation, and STEAM application development.</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Demonstrates regional competitive excellence in ICT problem-solving and STEAM system implementation.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Honors &amp; Scholarships</div>
+                <h3>The 10th GBA Greater Bay Area IT Application System Development Competition - First Prize</h3>
+                <div class="meta">The 10th GBA Greater Bay Area IT Application System Development Competition &bull; Nov 2025</div>
+                <p>First Prize (一等獎) in The 10th GBA Greater Bay Area IT Application System Development Competition for developing an innovative AI/IT application system (A-Eye project).</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Proves championship-level engineering capability against university/tertiary teams across the Greater Bay Area in applied IT system development.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Honors &amp; Scholarships</div>
+                <h3>The 10th GBA Greater Bay Area IT Application System Development Competition - Outstanding Teamwork Award</h3>
+                <div class="meta">The 10th GBA Greater Bay Area IT Application System Development Competition &bull; Nov 2025</div>
+                <p>Outstanding Teamwork Award (團隊協作卓越獎) in The 10th GBA Greater Bay Area IT Application System Development Competition, highlighting collaborative leadership, agile development, and team synergy.</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Shows effective teamwork, technical collaboration, and execution in complex software development projects.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Honors &amp; Scholarships</div>
+                <h3>The 9th GBA Greater Bay Area IT Application System Development Competition - Finals Second Prize</h3>
+                <div class="meta">The 9th GBA Greater Bay Area IT Application System Development Competition &bull; Dec 2024</div>
+                <p>Finals Second Prize (決賽二等獎) in The 9th GBA Greater Bay Area IT Application System Development Competition for developing an AI safety &amp; security monitoring system (AI全自動無人駕駛安全監管官).</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Highlights continuous excellence in computer vision, autonomous safety monitoring, and IT system architecture.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Honors &amp; Scholarships</div>
+                <h3>The Energy Saving and Low Carbon Creation Tomorrow Competition 2024 - Gold Award</h3>
+                <div class="meta">The Energy Saving and Low Carbon Creation Tomorrow Competition 2024 (CLP) &bull; Dec 2024</div>
+                <p>Gold Award in The Energy Saving and Low Carbon Creation Tomorrow Competition 2024 (中電辦比賽鼓勵大專學生以科技改善弱勢社群生活 / CLP Competition encouraging tertiary students to use technology to improve underprivileged communities). Developed an energy-saving and assistive AI/IoT tech system.</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Demonstrates high-impact technology development aimed at sustainability, ESG, and social good.</div>
+            </div>
+            
+            <div class="card">
+                <div class="badge">Honors &amp; Scholarships</div>
+                <h3>The 2nd City I&amp;T Grand Challenge - Innovation Award</h3>
+                <div class="meta">The 2nd City I&amp;T Grand Challenge / Innovation and Technology Commission (ITC) &bull; May 2024</div>
+                <p>Innovation Award in The 2nd City I&amp;T Grand Challenge (organized by the Innovation and Technology Commission of HKSAR). Developed smart city / community innovation technology solutions.</p>
+                <div class="relevance"><strong>HKUST CS Relevance:</strong> Proves innovative thinking and practical engineering capability recognized by the Hong Kong SAR government&#x27;s flagship innovation and technology competition.</div>
+            </div>
+            
+        </div>
+
+        <h2>3. Downloaded Activity & Event Photos (9)</h2>
+        <div class="media-grid">
+            
+            <figure class="media-card">
+                <img src="images/img_01_profile_featured.jpg" alt="Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page." loading="lazy" />
+                <figcaption>
+                    <strong>profile_featured</strong><br/>
+                    Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card">
+                <img src="images/img_02_profile_featured.jpg" alt="Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page." loading="lazy" />
+                <figcaption>
+                    <strong>profile_featured</strong><br/>
+                    Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card">
+                <img src="images/img_03_profile_featured.jpg" alt="Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page." loading="lazy" />
+                <figcaption>
+                    <strong>profile_featured</strong><br/>
+                    Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card">
+                <img src="images/img_04_profile_featured.jpg" alt="Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page." loading="lazy" />
+                <figcaption>
+                    <strong>profile_featured</strong><br/>
+                    Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card">
+                <img src="images/img_05_profile_featured.jpg" alt="Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page." loading="lazy" />
+                <figcaption>
+                    <strong>profile_featured</strong><br/>
+                    Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card">
+                <img src="images/img_06_profile_featured.jpg" alt="Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page." loading="lazy" />
+                <figcaption>
+                    <strong>profile_featured</strong><br/>
+                    Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card">
+                <img src="images/img_07_profile_featured.jpg" alt="Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page." loading="lazy" />
+                <figcaption>
+                    <strong>profile_featured</strong><br/>
+                    Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card">
+                <img src="images/img_08_profile_featured.jpg" alt="Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page." loading="lazy" />
+                <figcaption>
+                    <strong>profile_featured</strong><br/>
+                    Featured section cards and profile header banners/images on Esther&#x27;s main LinkedIn profile page.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card">
+                <img src="images/img_09_pycon_hk.jpg" alt="PyCon HK 2026 conference talk announcement poster featuring Cyrus Wong, Esther Cheung, and Arthur Chin" loading="lazy" />
+                <figcaption>
+                    <strong>pycon_hk</strong><br/>
+                    PyCon HK 2026 conference talk announcement poster featuring Cyrus Wong, Esther Cheung, and Arthur Chin
+                </figcaption>
+            </figure>
+            
+        </div>
+
+        <h2>4. Verified LinkedIn Evidence Screenshots (14)</h2>
+        <div class="media-grid">
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/01_profile_header_Esther_Cheung_-_LinkedIn_Profile_Header_About_Featured.png" alt="Esther Cheung - LinkedIn Profile Header, About &amp; Featured" loading="lazy" />
+                <figcaption>
+                    <strong>Esther Cheung - LinkedIn Profile Header, About &amp; Featured</strong> (profile_header)<br/>
+                    Main LinkedIn profile header, headline, About section, and Featured items for Hiu Tung Cheung (Esther). Highlights leadership roles as AWS Student Builder Group Leader, Google Developer Group on Campus Leader, and Red Hat Student Ambassador @HKIIT.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/02_academic_background_Esther_Cheung_-_Academic_Background_Education_CGPA_3_91.png" alt="Esther Cheung - Academic Background &amp; Education (CGPA 3.91)" loading="lazy" />
+                <figcaption>
+                    <strong>Esther Cheung - Academic Background &amp; Education (CGPA 3.91)</strong> (academic_background)<br/>
+                    Esther Cheung&#x27;s Education section showing Higher Diploma in Cloud and Data Centre Administration (Cloud Computing) at IVE Lee Wai Lee / HKIIT with an outstanding CGPA of 3.91/4.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/03_conference_talk_Esther_Cheung_-_Publications_Conference_Presentations.png" alt="Esther Cheung - Publications &amp; Conference Presentations" loading="lazy" />
+                <figcaption>
+                    <strong>Esther Cheung - Publications &amp; Conference Presentations</strong> (conference_talk)<br/>
+                    Esther Cheung&#x27;s Publications section detailing talks at AWS Summit Hong Kong 2026 (&#x27;What Happens When an AI Agent Takes Control of a Robot?&#x27;) and Hong Kong Open Source Conference (HKOSCon 2026, &#x27;ProvePresent - AI Anti-Proxy Attendance System&#x27;).
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/04_conference_talk_PyCon_Hong_Kong_2026_Speaker_Announcement_-_Kubernetes_Game_.png" alt="PyCon Hong Kong 2026 Speaker Announcement - Kubernetes Game Learning Platform" loading="lazy" />
+                <figcaption>
+                    <strong>PyCon Hong Kong 2026 Speaker Announcement - Kubernetes Game Learning Platform</strong> (conference_talk)<br/>
+                    Announcement of Esther Cheung speaking at PyCon Hong Kong 2026 on &#x27;從港域時空到 Kubernetes: 將香港遊戲世界化身雲原生學習平台&#x27; (From Hong Kong Zero to Kubernetes: Transforming a Hong Kong Gaming World into a Cloud-Native Learning Platform) with Cyrus Wong and Arthur Chin. Demonstrates real-time integration of game events into Kubernetes verification tasks via WebSockets, Python state machines, and serverless architectures.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/05_scholarship_award_Honors_Awards_Page_-_Section_1.png" alt="Honors &amp; Awards Page - Section 1" loading="lazy" />
+                <figcaption>
+                    <strong>Honors &amp; Awards Page - Section 1</strong> (scholarship_award)<br/>
+                    Top section of Honors &amp; Awards page showing Lei Foundation Scholarship, The Cathay Group Scholarship 2025/26, 8th GBA STEAM Excellence Award (Silver), and 10th GBA IT Application System Development Competition awards.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/06_scholarship_award_Honors_Awards_Page_-_Section_2.png" alt="Honors &amp; Awards Page - Section 2" loading="lazy" />
+                <figcaption>
+                    <strong>Honors &amp; Awards Page - Section 2</strong> (scholarship_award)<br/>
+                    Honors &amp; awards middle section: 9th GBA Finals Second Prize, Energy Saving and Low Carbon Creation Tomorrow Competition 2024 Gold Award, The 2nd City I&amp;T Grand Challenge Innovation Award, and 8th GBA Finals Best Application Award.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/07_scholarship_award_Honors_Awards_Page_-_Section_3.png" alt="Honors &amp; Awards Page - Section 3" loading="lazy" />
+                <figcaption>
+                    <strong>Honors &amp; Awards Page - Section 3</strong> (scholarship_award)<br/>
+                    Honors &amp; awards page showing 8th GBA Finals Best Application Award, GBA STEM 2023 Excellence Award, Youth College Extracurricular Award, and Youth College Outstanding Learning Award.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/08_leadership_Volunteering_Leadership_-_Red_Hat_AWS_Leader_GDG_Leader.png" alt="Volunteering &amp; Leadership - Red Hat, AWS Leader, GDG Leader" loading="lazy" />
+                <figcaption>
+                    <strong>Volunteering &amp; Leadership - Red Hat, AWS Leader, GDG Leader</strong> (leadership)<br/>
+                    Volunteering and Leadership section (part 1): Red Hat Student Ambassador, 1st AWS Student Builder Group Leader &#x27;26 (HKIIT), Google Developer Group on Campus Leader, AWS User Group HK meetup Presenter, GDGHK AI Session Presenter.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/09_leadership_Volunteering_Leadership_-_GDGHK_AI_Session_Microsoft_MoU_Pre.png" alt="Volunteering &amp; Leadership - GDGHK AI Session &amp; Microsoft MoU Presenter" loading="lazy" />
+                <figcaption>
+                    <strong>Volunteering &amp; Leadership - GDGHK AI Session &amp; Microsoft MoU Presenter</strong> (leadership)<br/>
+                    Volunteering and Leadership section (part 2): GDGHK AI Session Presenter, MoU Signing Ceremony HKIIT and Microsoft Hong Kong Limited Presenter (ProvePresent &amp; Virtual Tutor Demo).
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/10_leadership_Volunteering_Leadership_-_AWS_Summit_HKOSCon_Google_Cloud_Le.png" alt="Volunteering &amp; Leadership - AWS Summit, HKOSCon, Google Cloud Leaders Connect" loading="lazy" />
+                <figcaption>
+                    <strong>Volunteering &amp; Leadership - AWS Summit, HKOSCon, Google Cloud Leaders Connect</strong> (leadership)<br/>
+                    Volunteering and Leadership section (part 3): AWS Summit HK 2026 Presenter, HKOSCon 2026 Presenter, Google Cloud Leaders Connect HK 2026 Presenter &amp; Helper.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/11_certification_Certifications_-_Part_1_Google_Cloud_GKE.png" alt="Certifications - Part 1 (Google Cloud &amp; GKE)" loading="lazy" />
+                <figcaption>
+                    <strong>Certifications - Part 1 (Google Cloud &amp; GKE)</strong> (certification)<br/>
+                    Licenses and Certifications page showing Google Cloud, Kubernetes Engine, and other technical badges.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/12_certification_Certifications_-_Part_2_Red_Hat_Google_Cloud.png" alt="Certifications - Part 2 (Red Hat &amp; Google Cloud)" loading="lazy" />
+                <figcaption>
+                    <strong>Certifications - Part 2 (Red Hat &amp; Google Cloud)</strong> (certification)<br/>
+                    Certifications page showing Red Hat System Administration I and Red Hat OpenStack Administration I certifications.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/13_certification_Certifications_-_Part_3_Red_Hat_AWS.png" alt="Certifications - Part 3 (Red Hat &amp; AWS)" loading="lazy" />
+                <figcaption>
+                    <strong>Certifications - Part 3 (Red Hat &amp; AWS)</strong> (certification)<br/>
+                    Certifications page showing Red Hat Ansible, Podman/OpenShift, and AWS Academy credentials.
+                </figcaption>
+            </figure>
+            
+            <figure class="media-card screenshot-card">
+                <img src="screenshots/14_certification_Certifications_-_Part_4_AWS_Badges_Cloud_Practitioner.png" alt="Certifications - Part 4 (AWS Badges &amp; Cloud Practitioner)" loading="lazy" />
+                <figcaption>
+                    <strong>Certifications - Part 4 (AWS Badges &amp; Cloud Practitioner)</strong> (certification)<br/>
+                    Certifications page showing AWS Cloud Practitioner and AWS Academy Graduate badges.
+                </figcaption>
+            </figure>
+            
+        </div>
+    </div>
+</body>
+</html>

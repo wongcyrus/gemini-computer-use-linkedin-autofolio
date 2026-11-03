@@ -1,0 +1,372 @@
+{
+  "screenshots": [
+    {
+      "id": 1,
+      "category": "profile_header",
+      "title": "Esther Cheung - LinkedIn Profile Header, About & Featured",
+      "description": "Main LinkedIn profile header, headline, About section, and Featured items for Hiu Tung Cheung (Esther). Highlights leadership roles as AWS Student Builder Group Leader, Google Developer Group on Campus Leader, and Red Hat Student Ambassador @HKIIT.",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/",
+      "path": "screenshots/01_profile_header_Esther_Cheung_-_LinkedIn_Profile_Header_About_Featured.png",
+      "timestamp": "2026-11-03T10:21:09.704786"
+    },
+    {
+      "id": 2,
+      "category": "academic_background",
+      "title": "Esther Cheung - Academic Background & Education (CGPA 3.91)",
+      "description": "Esther Cheung's Education section showing Higher Diploma in Cloud and Data Centre Administration (Cloud Computing) at IVE Lee Wai Lee / HKIIT with an outstanding CGPA of 3.91/4.",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/",
+      "path": "screenshots/02_academic_background_Esther_Cheung_-_Academic_Background_Education_CGPA_3_91.png",
+      "timestamp": "2026-11-03T10:21:24.916270"
+    },
+    {
+      "id": 3,
+      "category": "conference_talk",
+      "title": "Esther Cheung - Publications & Conference Presentations",
+      "description": "Esther Cheung's Publications section detailing talks at AWS Summit Hong Kong 2026 ('What Happens When an AI Agent Takes Control of a Robot?') and Hong Kong Open Source Conference (HKOSCon 2026, 'ProvePresent - AI Anti-Proxy Attendance System').",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/",
+      "path": "screenshots/03_conference_talk_Esther_Cheung_-_Publications_Conference_Presentations.png",
+      "timestamp": "2026-11-03T10:21:42.070773"
+    },
+    {
+      "id": 4,
+      "category": "conference_talk",
+      "title": "PyCon Hong Kong 2026 Speaker Announcement - Kubernetes Game Learning Platform",
+      "description": "Announcement of Esther Cheung speaking at PyCon Hong Kong 2026 on '從港域時空到 Kubernetes: 將香港遊戲世界化身雲原生學習平台' (From Hong Kong Zero to Kubernetes: Transforming a Hong Kong Gaming World into a Cloud-Native Learning Platform) with Cyrus Wong and Arthur Chin. Demonstrates real-time integration of game events into Kubernetes verification tasks via WebSockets, Python state machines, and serverless architectures.",
+      "url": "https://www.linkedin.com/feed/update/urn:li:share:7521045033370951680/",
+      "path": "screenshots/04_conference_talk_PyCon_Hong_Kong_2026_Speaker_Announcement_-_Kubernetes_Game_.png",
+      "timestamp": "2026-11-03T10:22:23.526601"
+    },
+    {
+      "id": 5,
+      "category": "scholarship_award",
+      "title": "Honors & Awards Page - Section 1",
+      "description": "Top section of Honors & Awards page showing Lei Foundation Scholarship, The Cathay Group Scholarship 2025/26, 8th GBA STEAM Excellence Award (Silver), and 10th GBA IT Application System Development Competition awards.",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/details/honors/",
+      "path": "screenshots/05_scholarship_award_Honors_Awards_Page_-_Section_1.png",
+      "timestamp": "2026-11-03T10:24:02.173464"
+    },
+    {
+      "id": 6,
+      "category": "scholarship_award",
+      "title": "Honors & Awards Page - Section 2",
+      "description": "Honors & awards middle section: 9th GBA Finals Second Prize, Energy Saving and Low Carbon Creation Tomorrow Competition 2024 Gold Award, The 2nd City I&T Grand Challenge Innovation Award, and 8th GBA Finals Best Application Award.",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/details/honors/",
+      "path": "screenshots/06_scholarship_award_Honors_Awards_Page_-_Section_2.png",
+      "timestamp": "2026-11-03T10:25:00.438245"
+    },
+    {
+      "id": 7,
+      "category": "scholarship_award",
+      "title": "Honors & Awards Page - Section 3",
+      "description": "Honors & awards page showing 8th GBA Finals Best Application Award, GBA STEM 2023 Excellence Award, Youth College Extracurricular Award, and Youth College Outstanding Learning Award.",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/details/honors/",
+      "path": "screenshots/07_scholarship_award_Honors_Awards_Page_-_Section_3.png",
+      "timestamp": "2026-11-03T10:25:16.372700"
+    },
+    {
+      "id": 8,
+      "category": "leadership",
+      "title": "Volunteering & Leadership - Red Hat, AWS Leader, GDG Leader",
+      "description": "Volunteering and Leadership section (part 1): Red Hat Student Ambassador, 1st AWS Student Builder Group Leader '26 (HKIIT), Google Developer Group on Campus Leader, AWS User Group HK meetup Presenter, GDGHK AI Session Presenter.",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/details/volunteering-experiences/",
+      "path": "screenshots/08_leadership_Volunteering_Leadership_-_Red_Hat_AWS_Leader_GDG_Leader.png",
+      "timestamp": "2026-11-03T10:25:37.488561"
+    },
+    {
+      "id": 9,
+      "category": "leadership",
+      "title": "Volunteering & Leadership - GDGHK AI Session & Microsoft MoU Presenter",
+      "description": "Volunteering and Leadership section (part 2): GDGHK AI Session Presenter, MoU Signing Ceremony HKIIT and Microsoft Hong Kong Limited Presenter (ProvePresent & Virtual Tutor Demo).",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/details/volunteering-experiences/",
+      "path": "screenshots/09_leadership_Volunteering_Leadership_-_GDGHK_AI_Session_Microsoft_MoU_Pre.png",
+      "timestamp": "2026-11-03T10:25:49.102063"
+    },
+    {
+      "id": 10,
+      "category": "leadership",
+      "title": "Volunteering & Leadership - AWS Summit, HKOSCon, Google Cloud Leaders Connect",
+      "description": "Volunteering and Leadership section (part 3): AWS Summit HK 2026 Presenter, HKOSCon 2026 Presenter, Google Cloud Leaders Connect HK 2026 Presenter & Helper.",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/details/volunteering-experiences/",
+      "path": "screenshots/10_leadership_Volunteering_Leadership_-_AWS_Summit_HKOSCon_Google_Cloud_Le.png",
+      "timestamp": "2026-11-03T10:26:13.961647"
+    },
+    {
+      "id": 11,
+      "category": "certification",
+      "title": "Certifications - Part 1 (Google Cloud & GKE)",
+      "description": "Licenses and Certifications page showing Google Cloud, Kubernetes Engine, and other technical badges.",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/details/certifications/",
+      "path": "screenshots/11_certification_Certifications_-_Part_1_Google_Cloud_GKE.png",
+      "timestamp": "2026-11-03T10:26:58.031730"
+    },
+    {
+      "id": 12,
+      "category": "certification",
+      "title": "Certifications - Part 2 (Red Hat & Google Cloud)",
+      "description": "Certifications page showing Red Hat System Administration I and Red Hat OpenStack Administration I certifications.",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/details/certifications/",
+      "path": "screenshots/12_certification_Certifications_-_Part_2_Red_Hat_Google_Cloud.png",
+      "timestamp": "2026-11-03T10:27:20.442490"
+    },
+    {
+      "id": 13,
+      "category": "certification",
+      "title": "Certifications - Part 3 (Red Hat & AWS)",
+      "description": "Certifications page showing Red Hat Ansible, Podman/OpenShift, and AWS Academy credentials.",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/details/certifications/",
+      "path": "screenshots/13_certification_Certifications_-_Part_3_Red_Hat_AWS.png",
+      "timestamp": "2026-11-03T10:28:17.196001"
+    },
+    {
+      "id": 14,
+      "category": "certification",
+      "title": "Certifications - Part 4 (AWS Badges & Cloud Practitioner)",
+      "description": "Certifications page showing AWS Cloud Practitioner and AWS Academy Graduate badges.",
+      "url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/details/certifications/",
+      "path": "screenshots/14_certification_Certifications_-_Part_4_AWS_Badges_Cloud_Practitioner.png",
+      "timestamp": "2026-11-03T10:29:12.693947"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "category": "profile_featured",
+      "context_note": "Featured section cards and profile header banners/images on Esther's main LinkedIn profile page.",
+      "alt": "Cover photo",
+      "src": "https://media.licdn.com/dms/image/v2/D5616AQEObdMtt2L5vg/profile-displaybackgroundimage-shrink_200_800/B56aBndyfDJkAQ-/0/1788442257674?e=1795046400&v=beta&t=r0S0PqfmtkeW6d3DmMHfJl-4Ro8qiYTjcHt8VMKOS-Y",
+      "page_url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/",
+      "path": "images/img_01_profile_featured.jpg",
+      "width": 792,
+      "height": 199,
+      "timestamp": "2026-11-03T10:21:09.773876"
+    },
+    {
+      "id": 2,
+      "category": "profile_featured",
+      "context_note": "Featured section cards and profile header banners/images on Esther's main LinkedIn profile page.",
+      "alt": "",
+      "src": "https://media.licdn.com/dms/image/v2/D562DAQH3nq2zeTrdyA/profile-treasury-image-shrink_480_480/B56aBptyUmGsAU-/0/1788480005658?e=1794279600&v=beta&t=7YwtQS8ta9Pt89dS4H4GxQgwXTd7saVfbRqHiivXrE4",
+      "page_url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/",
+      "path": "images/img_02_profile_featured.jpg",
+      "width": 232,
+      "height": 121,
+      "timestamp": "2026-11-03T10:21:09.806471"
+    },
+    {
+      "id": 3,
+      "category": "profile_featured",
+      "context_note": "Featured section cards and profile header banners/images on Esther's main LinkedIn profile page.",
+      "alt": "",
+      "src": "https://media.licdn.com/dms/image/v2/D562DAQF5a2ZzGnWHpA/profile-treasury-image-shrink_480_480/B56aBnc7vWJAAU-/0/1788442033321?e=1794279600&v=beta&t=k9KX53OMehCbxkMsjR2u9ZYEvVBh4yA94n80Bmtrs4Q",
+      "page_url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/",
+      "path": "images/img_03_profile_featured.jpg",
+      "width": 232,
+      "height": 121,
+      "timestamp": "2026-11-03T10:21:09.837660"
+    },
+    {
+      "id": 4,
+      "category": "profile_featured",
+      "context_note": "Featured section cards and profile header banners/images on Esther's main LinkedIn profile page.",
+      "alt": "",
+      "src": "https://media.licdn.com/dms/image/sync/v2/D5627AQFdfz6e3OU-YQ/articleshare-shrink_480/B56Z7jfEDnKkAY-/0/1781933032377?e=1794279600&v=beta&t=WYzBSytdWelZgLNhah98R-uTS4A64QffOyodX3irG7s",
+      "page_url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/",
+      "path": "images/img_04_profile_featured.jpg",
+      "width": 232,
+      "height": 121,
+      "timestamp": "2026-11-03T10:21:09.900123"
+    },
+    {
+      "id": 5,
+      "category": "profile_featured",
+      "context_note": "Featured section cards and profile header banners/images on Esther's main LinkedIn profile page.",
+      "alt": "",
+      "src": "https://media.licdn.com/dms/image/v2/D562DAQHZ5gjFdrN43g/profile-treasury-image-shrink_480_480/B56aBptlrsHUAU-/0/1788479953862?e=1794279600&v=beta&t=VjJ5qnYO2nhZFN7NufbwjXHRkNT3uJ-JThgjSvxOubI",
+      "page_url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/",
+      "path": "images/img_05_profile_featured.jpg",
+      "width": 232,
+      "height": 121,
+      "timestamp": "2026-11-03T10:21:09.937041"
+    },
+    {
+      "id": 6,
+      "category": "profile_featured",
+      "context_note": "Featured section cards and profile header banners/images on Esther's main LinkedIn profile page.",
+      "alt": "View image",
+      "src": "https://media.licdn.com/dms/image/v2/D5622AQF-lN-KAg2TWQ/feedshare-shrink_480/B56aGAemtCGsAg-/0/1793156869153?e=1795046400&v=beta&t=RFs4SqoblSanNxH6HcAxWfl7iPaGcRu4w23NvzQ_AWQ",
+      "page_url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/",
+      "path": "images/img_06_profile_featured.jpg",
+      "width": 336,
+      "height": 168,
+      "timestamp": "2026-11-03T10:21:09.973115"
+    },
+    {
+      "id": 7,
+      "category": "profile_featured",
+      "context_note": "Featured section cards and profile header banners/images on Esther's main LinkedIn profile page.",
+      "alt": "View image",
+      "src": "https://media.licdn.com/dms/image/v2/D4E22AQGqCUa2vkexjw/feedshare-shrink_480/B4EaGHLLs8J0Ag-/0/1793269218572?e=1795046400&v=beta&t=Df1qLPKSGRzzgKp1itdYOIRX1jG6SaZXzR_taeSslvM",
+      "page_url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/",
+      "path": "images/img_07_profile_featured.jpg",
+      "width": 362,
+      "height": 268,
+      "timestamp": "2026-11-03T10:21:10.026784"
+    },
+    {
+      "id": 8,
+      "category": "profile_featured",
+      "context_note": "Featured section cards and profile header banners/images on Esther's main LinkedIn profile page.",
+      "alt": "View image",
+      "src": "https://media.licdn.com/dms/image/v2/D5622AQGclytufmJ1uQ/feedshare-shrink_480/B56aF8m1ubKIAg-/0/1793091919043?e=1795046400&v=beta&t=BlMoly8Zfh9kfcdoQdVwej30pn9qgDz7fpZo3cVzhNU",
+      "page_url": "https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/",
+      "path": "images/img_08_profile_featured.jpg",
+      "width": 362,
+      "height": 268,
+      "timestamp": "2026-11-03T10:21:10.059167"
+    },
+    {
+      "id": 9,
+      "category": "pycon_hk",
+      "context_note": "PyCon HK 2026 conference talk announcement poster featuring Cyrus Wong, Esther Cheung, and Arthur Chin",
+      "alt": "View image",
+      "src": "https://media.licdn.com/dms/image/v2/D5622AQF-lN-KAg2TWQ/feedshare-shrink_800/B56aGAemtCGsAc-/0/1793156869152?e=1795046400&v=beta&t=40u0PByHrhUP5U-nV4Qr_I1RDqyMyCaIAXYQNCzkqYU",
+      "page_url": "https://www.linkedin.com/feed/update/urn:li:share:7521045033370951680/",
+      "path": "images/img_09_pycon_hk.jpg",
+      "width": 550,
+      "height": 550,
+      "timestamp": "2026-11-03T10:22:27.669111"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "section": "Community Leadership",
+      "title": "Cloud & Community Leadership (GDG, AWS Student Builder, Red Hat Ambassador)",
+      "date": "Present",
+      "organization": "HKIIT / IVE / GDG / AWS / Red Hat",
+      "details": "Focus on cloud technologies including AWS, Google Cloud, Linux, containers, and Kubernetes. Active as a Google Developer Group on Campus Leader, AWS Student Builder Group Leader, and Red Hat Student Ambassador at HKIIT. Features prominent institutional collaboration with Microsoft Hong Kong and HKIIT video promotions.",
+      "relevance_to_hkust_cs": "Demonstrates exceptional tech leadership, strong cloud and systems engineering foundation (AWS, GCP, Linux, Kubernetes), and proven community outreach capabilities directly aligned with HKUST CS.",
+      "timestamp": "2026-11-03T10:21:10.059499"
+    },
+    {
+      "id": 2,
+      "section": "Academic Background",
+      "title": "Higher Diploma in Cloud and Data Centre Administration (CGPA 3.91/4.0)",
+      "date": "2025 - Present",
+      "organization": "Hong Kong Institute of Vocational Education (IVE) - Lee Wai Lee / HKIIT",
+      "details": "Higher Diploma in Cloud and Data Centre Administration, Cloud Computing at Hong Kong Institute of Vocational Education (IVE) - Lee Wai Lee / HKIIT. Academic Grade: CGPA 3.91 / 4.0. Top academic performer.",
+      "relevance_to_hkust_cs": "Exceptional academic standing (CGPA 3.91/4) proving rigorous academic excellence and readiness for HKUST Computer Science curriculum.",
+      "timestamp": "2026-11-03T10:21:24.916617"
+    },
+    {
+      "id": 3,
+      "section": "Conference & Research",
+      "title": "What Happens When an AI Agent Takes Control of a Robot? (AWS Summit HK)",
+      "date": "Jun 17, 2026",
+      "organization": "AWS Summit Hong Kong",
+      "details": "Conference presentation at AWS Summit Hong Kong titled 'What Happens When an AI Agent Takes Control of a Robot?'. Explores whether an AI agent can fully operate and guide physical robot behavior, integrating cloud robotics, LLM reasoning, and real-time execution.",
+      "relevance_to_hkust_cs": "Exemplifies innovative research at the intersection of AI Agents, Robotics, and Cloud Systems, areas of deep research focus at HKUST CS.",
+      "timestamp": "2026-11-03T10:21:42.071421"
+    },
+    {
+      "id": 4,
+      "section": "Conference & Research",
+      "title": "ProvePresent - AI Anti-Proxy Attendance Solution (HKOSCon 2026)",
+      "date": "Jun 6, 2026",
+      "organization": "Hong Kong Open Source Conference (HKOSCon)",
+      "details": "Conference presentation at Hong Kong Open Source Conference (HKOSCon 2026) titled '真出席 ProvePresent - AI防代打卡點名方案'. Built on Microsoft Azure core cloud infrastructure to eliminate proxy attendance in academic institutions using computer vision and verification.",
+      "relevance_to_hkust_cs": "Demonstrates practical cloud architecture, applied AI system design, open source contribution, and high-impact software engineering skills directly relevant to HKUST CS.",
+      "timestamp": "2026-11-03T10:21:42.071870"
+    },
+    {
+      "id": 5,
+      "section": "Conference & Research",
+      "title": "Speaker at PyCon HK 2026: From Hong Kong Zero to Kubernetes Cloud-Native Learning Platform",
+      "date": "Nov 14, 2026",
+      "organization": "PyCon Hong Kong 2026",
+      "details": "Co-speaker alongside Cyrus Wong and Arthur Chin presenting '從港域時空到 Kubernetes: 將香港遊戲世界化身雲原生學習平台' (From Hong Kong Zero to Kubernetes: Transforming a Hong Kong Gaming World into a Cloud-Native Learning Platform). Explores how Hong Kong Zero becomes a cloud-native educational platform, turning interactive in-game quests/events into real Kubernetes cluster configuration verification tasks and streaming back execution results via WebSockets. Technical architecture leverages Python state machines, serverless event-driven pipelines, and long-running automated assessment workflows.",
+      "relevance_to_hkust_cs": "Demonstrates advanced practical mastery of cloud-native computing, distributed systems orchestration (Kubernetes), real-time protocols (WebSockets), Python asynchronous programming, and software engineering architecture. Proves capability to deliver technical conference presentations and design scalable gamified learning platforms.",
+      "timestamp": "2026-11-03T10:22:35.777876"
+    },
+    {
+      "id": 6,
+      "section": "Honors & Scholarships",
+      "title": "Lei Foundation Scholarship",
+      "date": "Oct 2026",
+      "organization": "The Lei Foundation Limited",
+      "details": "Awarded by The Lei Foundation Limited in recognition of academic excellence, talent development, and leadership at HKIIT / Hong Kong Institute of Vocational Education (IVE) - Lee Wai Lee. #hkiit #leifoundation #leigarden #scholarship #studentachievement #talentdevelopment",
+      "relevance_to_hkust_cs": "Demonstrates outstanding academic distinction, student achievement, and institutional recognition in information technology.",
+      "timestamp": "2026-11-03T10:24:42.591708"
+    },
+    {
+      "id": 7,
+      "section": "Honors & Scholarships",
+      "title": "The Cathay Group Scholarship 2025/26",
+      "date": "Sep 2026",
+      "organization": "The Cathay Group & Vocational Training Council",
+      "details": "The Cathay Group Scholarship is a joint initiative established by the Cathay Group and the Vocational Training Council (VTC). It is designed to recognize and reward outstanding VTC students pursuing careers in aviation and technology. Associated with Hong Kong Institute of Vocational Education (IVE) - Lee Wai Lee.",
+      "relevance_to_hkust_cs": "Prestigious industry-backed scholarship recognizing top-tier technological competence, innovation, and leadership potential in technology and aviation systems.",
+      "timestamp": "2026-11-03T10:24:42.592191"
+    },
+    {
+      "id": 8,
+      "section": "Honors & Scholarships",
+      "title": "The 8th Greater Bay Area Digital Education STEAM Excellence Award 2026 (Tertiary ICT) - Silver Award",
+      "date": "Aug 2026",
+      "organization": "The 8th Greater Bay Area Digital Education STEAM Excellence Award 2026",
+      "details": "Won Silver Award in the Tertiary ICT category at The 8th Greater Bay Area Digital Education STEAM Excellence Award 2026. Recognizes excellence in software engineering, digital education innovation, and STEAM application development.",
+      "relevance_to_hkust_cs": "Demonstrates regional competitive excellence in ICT problem-solving and STEAM system implementation.",
+      "timestamp": "2026-11-03T10:24:49.117031"
+    },
+    {
+      "id": 9,
+      "section": "Honors & Scholarships",
+      "title": "The 10th GBA Greater Bay Area IT Application System Development Competition - First Prize",
+      "date": "Nov 2025",
+      "organization": "The 10th GBA Greater Bay Area IT Application System Development Competition",
+      "details": "First Prize (一等獎) in The 10th GBA Greater Bay Area IT Application System Development Competition for developing an innovative AI/IT application system (A-Eye project).",
+      "relevance_to_hkust_cs": "Proves championship-level engineering capability against university/tertiary teams across the Greater Bay Area in applied IT system development.",
+      "timestamp": "2026-11-03T10:24:49.117491"
+    },
+    {
+      "id": 10,
+      "section": "Honors & Scholarships",
+      "title": "The 10th GBA Greater Bay Area IT Application System Development Competition - Outstanding Teamwork Award",
+      "date": "Nov 2025",
+      "organization": "The 10th GBA Greater Bay Area IT Application System Development Competition",
+      "details": "Outstanding Teamwork Award (團隊協作卓越獎) in The 10th GBA Greater Bay Area IT Application System Development Competition, highlighting collaborative leadership, agile development, and team synergy.",
+      "relevance_to_hkust_cs": "Shows effective teamwork, technical collaboration, and execution in complex software development projects.",
+      "timestamp": "2026-11-03T10:24:49.117822"
+    },
+    {
+      "id": 11,
+      "section": "Honors & Scholarships",
+      "title": "The 9th GBA Greater Bay Area IT Application System Development Competition - Finals Second Prize",
+      "date": "Dec 2024",
+      "organization": "The 9th GBA Greater Bay Area IT Application System Development Competition",
+      "details": "Finals Second Prize (決賽二等獎) in The 9th GBA Greater Bay Area IT Application System Development Competition for developing an AI safety & security monitoring system (AI全自動無人駕駛安全監管官).",
+      "relevance_to_hkust_cs": "Highlights continuous excellence in computer vision, autonomous safety monitoring, and IT system architecture.",
+      "timestamp": "2026-11-03T10:25:00.438638"
+    },
+    {
+      "id": 12,
+      "section": "Honors & Scholarships",
+      "title": "The Energy Saving and Low Carbon Creation Tomorrow Competition 2024 - Gold Award",
+      "date": "Dec 2024",
+      "organization": "The Energy Saving and Low Carbon Creation Tomorrow Competition 2024 (CLP)",
+      "details": "Gold Award in The Energy Saving and Low Carbon Creation Tomorrow Competition 2024 (中電辦比賽鼓勵大專學生以科技改善弱勢社群生活 / CLP Competition encouraging tertiary students to use technology to improve underprivileged communities). Developed an energy-saving and assistive AI/IoT tech system.",
+      "relevance_to_hkust_cs": "Demonstrates high-impact technology development aimed at sustainability, ESG, and social good.",
+      "timestamp": "2026-11-03T10:25:07.115182"
+    },
+    {
+      "id": 13,
+      "section": "Honors & Scholarships",
+      "title": "The 2nd City I&T Grand Challenge - Innovation Award",
+      "date": "May 2024",
+      "organization": "The 2nd City I&T Grand Challenge / Innovation and Technology Commission (ITC)",
+      "details": "Innovation Award in The 2nd City I&T Grand Challenge (organized by the Innovation and Technology Commission of HKSAR). Developed smart city / community innovation technology solutions.",
+      "relevance_to_hkust_cs": "Proves innovative thinking and practical engineering capability recognized by the Hong Kong SAR government's flagship innovation and technology competition.",
+      "timestamp": "2026-11-03T10:25:07.115669"
+    }
+  ]
+}

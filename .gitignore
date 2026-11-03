@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Browser profiles & temporary local state
+chrome_profile/
+browser_profile/
+esther_profile_summary.md
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
