@@ -1,0 +1,5 @@
+# Class LinkedIn Profile List for AutoFolio
+# Format: One LinkedIn profile URL per line (or "Student Name | https://www.linkedin.com/in/handle/")
+# Lines starting with '#' and blank lines are ignored.
+
+Hiu Tung Cheung (Esther) | https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/

@@ -126,10 +126,37 @@ def test_get_function_responses():
     assert fr.parts[0].inline_data.data == b"fake_png_bytes"
 
 
+def test_load_profiles_from_file(tmp_path=None):
+    import tempfile
+    from pathlib import Path
+    import build_portfolio
+
+    content = """
+    # Class list comment
+    Hiu Tung Cheung (Esther) | https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/
+    https://www.linkedin.com/in/another-student-12345/?trk=public_profile
+    Arthur Chin, linkedin.com/in/arthur-chin-example
+    """
+    with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False, encoding="utf-8") as f:
+        f.write(content)
+        temp_name = f.name
+
+    try:
+        entries = build_portfolio.load_profiles_from_file(temp_name)
+        assert len(entries) == 3
+        assert entries[0]["handle"] == "hiu-tung-cheung-esther-085656387"
+        assert entries[0]["name_hint"] == "Hiu Tung Cheung (Esther)"
+        assert entries[1]["url"] == "https://www.linkedin.com/in/another-student-12345/"
+        assert entries[2]["url"] == "https://www.linkedin.com/in/arthur-chin-example/"
+    finally:
+        Path(temp_name).unlink(missing_ok=True)
+
+
 if __name__ == "__main__":
     test_denormalize_coordinates()
     test_build_generate_content_config()
     test_execute_function_calls_click_and_type()
     test_safety_confirmation_acknowledged()
     test_get_function_responses()
+    test_load_profiles_from_file()
     print("All tests passed successfully!")

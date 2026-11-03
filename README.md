@@ -94,7 +94,34 @@ $env:GOOGLE_GENAI_USE_ENTERPRISE = "True"
 
 ## Usage
 
-### A. Run the 5-Stage LinkedIn AutoFolio & Recommendation Builder (`build_portfolio.py`)
+### A. Run for an Entire Class from a Text File (`--profiles-file students.txt`)
+
+Put all student LinkedIn URLs in a text file (e.g., `students.txt`, one URL per line or `Student Name | https://www.linkedin.com/in/handle/`):
+
+```text
+# students.txt
+Hiu Tung Cheung (Esther) | https://www.linkedin.com/in/hiu-tung-cheung-esther-085656387/
+https://www.linkedin.com/in/student-two-handle/
+https://www.linkedin.com/in/student-three-handle/
+```
+
+Run `build_portfolio.py` in class batch mode:
+
+```powershell
+.\.venv\Scripts\python.exe build_portfolio.py `
+  --profiles-file students.txt `
+  --portfolio-dir class_portfolios `
+  --target-program "Bachelor of Engineering in Computer Science (BEng in CS), HKUST" `
+  --recommender "Cyrus Wong, Senior Lecturer, HKIIT"
+```
+
+In class mode, AutoFolio creates a dedicated subfolder per student (`class_portfolios/<linkedin-handle>/portfolio.html` & `hkust_cs_recommendation_letter.md`) and generates a master **Class Dashboard** at `class_portfolios/index.html` and `class_portfolios/index.md`!
+
+```powershell
+Start-Process .\class_portfolios\index.html
+```
+
+### B. Run for a Single Student (`--profile-url`)
 
 ```powershell
 .\.venv\Scripts\python.exe build_portfolio.py `
@@ -109,7 +136,7 @@ Open the generated HTML portfolio after completion:
 Start-Process .\portfolio\portfolio.html
 ```
 
-### B. Run General-Purpose Gemini Computer Use Tasks (`main.py`)
+### C. Run General-Purpose Gemini Computer Use Tasks (`main.py`)
 
 `main.py` provides a clean, general-purpose CLI for any browser automation task using Gemini Computer Use:
 
