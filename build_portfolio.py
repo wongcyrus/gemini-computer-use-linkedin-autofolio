@@ -541,18 +541,22 @@ Use ALL the concrete, specific facts, project architectures, conference presenta
 {combined_summaries}
 
 ### Requirements for the Letter:
-1. **No generic filler**: Every paragraph must cite real evidence, exact event/project names, dates, technical stacks, and specific achievements traced from the student's profile.
-2. **Structure**:
+1. **Honest, Authentic Tone (Focus on Tech Community Leadership, Communication & Teamwork over Deep Low-Level Engineering)**:
+   - Do **NOT** exaggerate or portray the student as a hardcore low-level systems architect who single-handedly wrote complex backend infrastructure.
+   - Instead, emphasize their **true strengths**: **tech community building, developer advocacy, public speaking/demo presentation, project coordination, teamwork, and passionate self-motivated learning**.
+   - When mentioning technical conferences or projects (e.g., PyCon HK, AWS Summit, HKOSCon, VTC x Microsoft MoU, competitions), frame their contribution accurately around **presenting live demos, bridging complex cloud/AI concepts for audiences, collaborating effectively with mentors/teammates, and driving student developer community engagement**.
+2. **No generic filler**: Every paragraph must cite real evidence, exact event names, dates, community roles, scholarships, and certifications traced from the student's profile.
+3. **Structure**:
    - **Header & Salutation**: Addressed to the Admissions Committee for {target_program}.
-   - **Opening & Relationship**: State in what capacity {recommender} knows {student_name}, highlighting their academic standing/CGPA (if visible) and engineering maturity.
-   - **Technical Projects, Systems Engineering & Research**: Detail their strongest technical projects, open-source contributions, conference presentations, or internships traced from their Featured/Activity/Projects sections.
-   - **Academic Excellence, Awards & Competitive Achievements**: Highlight scholarships, hackathon/competition awards, and academic honors traced from their Honors & Awards section.
-   - **Technical Credentials & Community Leadership**: Detail their verified industry certifications/badges (AWS, Google Cloud, Red Hat, Azure, etc.) and student leadership/volunteering roles.
-   - **Conclusion**: Strong, unequivocal endorsement for {target_program}.
+   - **Opening & Relationship**: State in what capacity {recommender} knows {student_name}, highlighting their strong academic dedication (CGPA 3.91/4.0), work ethic, and standout role as a student tech community leader and presenter.
+   - **Tech Community Leadership & Developer Ecosystem Building**: Highlight their remarkable commitment to building campus and regional tech communities (e.g., serving as **1st AWS Student Builder Group Leader**, **Google Developer Group (GDG) on Campus Leader**, and **Hong Kong's first Red Hat Student Ambassador** at HKIIT, plus community volunteering like teaching AI to the elderly with CLP Power and helping at Info Days).
+   - **Public Speaking, Live Tech Showcases & Collaborative Projects**: Detail how they stepped onto major industry and open-source stages (**PyCon Hong Kong 2026**, **AWS Summit Hong Kong**, **HKOSCon 2026**, **Google Cloud Leaders Connect / GDGHK**, **AWS User Group HK**, and the **VTC × Microsoft Hong Kong MoU Signing Ceremony**) as a confident presenter and communicator who translates technical projects (*Hong Kong Zero × Kubernetes*, *ProvePresent*, *AI Virtual Tutor*, *Cloud Robotics*) into engaging demonstrations.
+   - **Academic Discipline, Teamwork Awards & Continuous Learning**: Highlight their **3.91/4.0 CGPA**, **13 Honors & Awards** (including **The Cathay Group Scholarship**, **Lei Foundation Scholarship**, **10th GBA IT Competition First Prize & Outstanding Teamwork Award**, **CLP Gold Award**, **City I&T Grand Challenge**), and **16 foundational cloud/Linux certifications** across AWS, Google Cloud, and Red Hat that show their eagerness to learn.
+   - **Conclusion**: Strong, genuine endorsement explaining why they want to pursue a degree at HKUST—to deepen their theoretical and engineering foundation in Computer Science so they can match their already-exceptional community leadership, communication, and teamwork skills.
 
 Provide both:
 - **Part A**: The complete formal Admission Recommendation Letter (ready to print/sign on institutional letterhead).
-- **Part B**: A rich, specific LinkedIn Recommendation (ready to paste into LinkedIn's Recommend box).
+- **Part B**: A warm, authentic LinkedIn Recommendation emphasizing their tech community leadership, public speaking, teamwork, and learning attitude (ready to paste into LinkedIn's Recommend box).
 """
     letter_resp = client.models.generate_content(model=model, contents=letter_prompt)
     letter_text = letter_resp.text or ""
