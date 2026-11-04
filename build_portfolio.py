@@ -554,9 +554,12 @@ Use ALL the concrete, specific facts, project architectures, conference presenta
    - **Academic Discipline, Teamwork Awards & Continuous Learning**: Highlight their **3.91/4.0 CGPA**, **13 Honors & Awards** (including **The Cathay Group Scholarship**, **Lei Foundation Scholarship**, **10th GBA IT Competition First Prize & Outstanding Teamwork Award**, **CLP Gold Award**, **City I&T Grand Challenge**), and **16 foundational cloud/Linux certifications** across AWS, Google Cloud, and Red Hat that show their eagerness to learn.
    - **Conclusion**: Strong, genuine endorsement explaining why they want to pursue a degree at HKUST—to deepen their theoretical and engineering foundation in Computer Science so they can match their already-exceptional community leadership, communication, and teamwork skills.
 
-Provide both:
+Provide all three sections in your output:
 - **Part A**: The complete formal Admission Recommendation Letter (ready to print/sign on institutional letterhead).
-- **Part B**: A warm, authentic LinkedIn Recommendation emphasizing their tech community leadership, public speaking, teamwork, and learning attitude (ready to paste into LinkedIn's Recommend box).
+- **Part B**: Direct responses for the University Admission Reference Form prompts:
+  - **(1) The candidate's academic ability, aptitude and suitability for university education** (general profile, key strengths in community leadership/communication/teamwork/CGPA, and an honest, constructive assessment of areas for growth such as deepening theoretical CS & core coding skills at university).
+  - **(2) Additional comments in the case that the candidate's public examination results might not reflect his/her ability to pursue university education** (explaining how their tertiary progression—e.g. from Youth College Vocational Diploma to Higher Diploma with a 3.91/4.0 CGPA, scholarships, 16 certifications, and conference speaking—demonstrates their true academic transformation and university readiness far better than earlier secondary exam scores).
+- **Part C**: A warm, authentic LinkedIn Recommendation emphasizing their tech community leadership, public speaking, teamwork, and learning attitude (ready to paste into LinkedIn's Recommend box).
 """
     letter_resp = client.models.generate_content(model=model, contents=letter_prompt)
     letter_text = letter_resp.text or ""
