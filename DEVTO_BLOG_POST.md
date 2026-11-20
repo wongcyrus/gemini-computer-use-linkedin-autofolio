@@ -44,37 +44,37 @@ Here is the end-to-end architecture of AutoFolio, showing how Vertex AI, Chrome 
 
 ```mermaid
 flowchart TD
-    subgraph BrowserEnvironment["🖥️ Local Client Environment"]
+    subgraph BrowserEnvironment["Local Client Environment"]
         A["Active Google Chrome Browser\n(Authenticated Session, Cookies, 2FA Active)"]
         DT["DevToolsActivePort\n(%LOCALAPPDATA%/.../DevToolsActivePort)"]
         PW["Playwright CDP Bridge\n(connect_over_cdp ws://127.0.0.1:port/...)"]
-        A -->|Writes Port & GUID| DT
-        DT -->|WebSocket URL Discovery| PW
-        PW -->|Attaches to Active Tab| A
+        A -->|"Writes Port and GUID"| DT
+        DT -->|"WebSocket URL Discovery"| PW
+        PW -->|"Attaches to Active Tab"| A
     end
 
-    subgraph GoogleCloud["☁️ Google Cloud Vertex AI"]
+    subgraph GoogleCloud["Google Cloud Vertex AI"]
         ADC["Google Cloud IAM / ADC\n(gcloud auth application-default login)"]
         SDK["Google Gen AI SDK (google-genai)\n(Client vertexai=True, location='global')"]
         MODEL["Gemini 3.8 Flash (Computer Use Model)\n(Spatial Reasoning, Prompt Injection Detection)"]
         ADC --> SDK --> MODEL
     end
 
-    subgraph AgentLoop["🔄 Hybrid Agent Execution Loop"]
+    subgraph AgentLoop["Hybrid Agent Execution Loop"]
         SCREEN["1. Viewport Base64 Screenshot"]
         DECISION{"2. Gemini Multi-Modal Decision"}
         NATIVE["3a. Native ComputerUse Actions\n(click_at, scroll_page, type_text, wait)"]
         CUSTOM["3b. Custom Domain Tools\n(save_evidence_screenshot, extract_and_save_page_images)"]
         
-        PW -->|Capture| SCREEN --> MODEL --> DECISION
-        DECISION --> NATIVE -->|Mouse & Keyboard Commands| PW
-        DECISION --> CUSTOM -->|DOM Injection & File I/O| ARTIFACTS
+        PW -->|"Capture"| SCREEN --> MODEL --> DECISION
+        DECISION --> NATIVE -->|"Mouse and Keyboard Commands"| PW
+        DECISION --> CUSTOM -->|"DOM Injection and File I/O"| ARTIFACTS
     end
 
-    subgraph ARTIFACTS["📁 Generated Showcase Artifacts"]
-        ART1["Interactive HTML Portfolio\n(portfolio.html & portfolio.md)"]
+    subgraph ARTIFACTS["Generated Showcase Artifacts"]
+        ART1["Interactive HTML Portfolio\n(portfolio.html and portfolio.md)"]
         ART2["Evidence-Backed Rec Letter\n(hkust_cs_recommendation_letter.md)"]
-        ART3["4-Page Admissions Dossier\n(supporting_doc.pdf & docx)"]
+        ART3["4-Page Admissions Dossier\n(supporting_doc.pdf and docx)"]
         ART4["Consolidated Class Dashboard\n(class_portfolios/index.html)"]
     end
 ```
@@ -266,24 +266,24 @@ One of the most powerful features of Gemini on Google Cloud is **Hybrid Tool Cal
 
 ```mermaid
 flowchart TD
-    MODEL["Gemini 3.8 Flash on Vertex AI"] -->|Generates Model Turn| CANDIDATE{"Inspect Candidate FunctionCall"}
+    MODEL["Gemini 3.8 Flash on Vertex AI"] -->|"Generates Model Turn"| CANDIDATE{"Inspect Candidate FunctionCall"}
     
-    subgraph NativeComputerUse["🌐 Native ComputerUse Tool (types.ComputerUse)"]
-        CANDIDATE -->|click_at(x, y)| CU_CLICK["Translate (x,y) & page.mouse.click()"]
-        CANDIDATE -->|scroll_page(direction)| CU_SCROLL["page.mouse.wheel(0, dy)"]
-        CANDIDATE -->|type_text_at(text, x, y)| CU_TYPE["page.mouse.click() & page.keyboard.type()"]
-        CANDIDATE -->|navigate(url)| CU_NAV["page.goto(url, wait_until='domcontentloaded')"]
-        CANDIDATE -->|wait_5_seconds()| CU_WAIT["page.wait_for_timeout(5000)"]
+    subgraph NativeComputerUse["Native ComputerUse Tool (types.ComputerUse)"]
+        CANDIDATE -->|"click_at(x, y)"| CU_CLICK["Translate coordinates and page.mouse.click"]
+        CANDIDATE -->|"scroll_page(direction)"| CU_SCROLL["page.mouse.wheel(0, dy)"]
+        CANDIDATE -->|"type_text_at(text, x, y)"| CU_TYPE["page.mouse.click and page.keyboard.type"]
+        CANDIDATE -->|"navigate(url)"| CU_NAV["page.goto(url)"]
+        CANDIDATE -->|"wait_5_seconds()"| CU_WAIT["page.wait_for_timeout(5000)"]
     end
 
-    subgraph CustomDomainTools["🛠️ Custom AutoFolio Tools (FunctionDeclaration)"]
-        CANDIDATE -->|save_evidence_screenshot(label, category)| CT_SHOT["Capture high-res proof, watermark, & catalog"]
-        CANDIDATE -->|extract_and_save_page_images(category)| CT_IMG["DOM evaluate <img> tags, download media files"]
-        CANDIDATE -->|record_portfolio_item(item_data)| CT_ITEM["Append structured JSON record to manifest.json"]
-        CANDIDATE -->|yield_to_user(message)| CT_HITL["Pause for Human-in-the-Loop review"]
+    subgraph CustomDomainTools["Custom AutoFolio Tools (FunctionDeclaration)"]
+        CANDIDATE -->|"save_evidence_screenshot"| CT_SHOT["Capture high-res proof, watermark, and catalog"]
+        CANDIDATE -->|"extract_and_save_page_images"| CT_IMG["DOM evaluate image elements, download media files"]
+        CANDIDATE -->|"record_portfolio_item"| CT_ITEM["Append structured JSON record to manifest.json"]
+        CANDIDATE -->|"yield_to_user"| CT_HITL["Pause for Human-in-the-Loop review"]
     end
 
-    CU_CLICK --> SYNC["Synchronize Browser State & Next Viewport"]
+    CU_CLICK --> SYNC["Synchronize Browser State and Next Viewport"]
     CU_SCROLL --> SYNC
     CU_TYPE --> SYNC
     CU_NAV --> SYNC
@@ -293,7 +293,7 @@ flowchart TD
     CT_ITEM --> SYNC
     CT_HITL --> SYNC
     
-    SYNC -->|Send FunctionResponse + New Screenshot| MODEL
+    SYNC -->|"FunctionResponse + New Screenshot"| MODEL
 ```
 
 ### Passing Both Tools to `generate_content`
@@ -341,19 +341,19 @@ Rather than letting an agent roam aimlessly, AutoFolio runs a disciplined **5-st
 
 ```mermaid
 flowchart TD
-    START(["Start: Profile URL Loaded"]) --> S1["Stage 1: Main Profile & Featured\n• Headline, About, Education, Skills\n• Featured Projects & GitHub Links\n• Capture Profile Header Screenshot"]
+    START["Start: Profile URL Loaded"] --> S1["Stage 1: Main Profile and Featured\n- Headline, About, Education, Skills\n- Featured Projects and GitHub Links\n- Capture Profile Header Screenshot"]
     
-    S1 --> S2["Stage 2: Recent Activity Posts (/recent-activity/all/)\n• Visually scan timeline posts\n• Click '...see more' on truncated posts\n• Identify conference talks, hackathons, open source\n• Extract & download embedded event photos"]
+    S1 --> S2["Stage 2: Recent Activity Posts (/recent-activity/all/)\n- Visually scan timeline posts\n- Click '...see more' on truncated posts\n- Identify conference talks, hackathons, open source\n- Extract and download embedded event photos"]
     
-    S2 --> S3["Stage 3: Honors & Scholarships (/details/honors/)\n• Navigate to dedicated honors sub-page\n• Record award titles, issuing bodies, dates\n• Capture high-res proof screenshots"]
+    S2 --> S3["Stage 3: Honors and Scholarships (/details/honors/)\n- Navigate to dedicated honors sub-page\n- Record award titles, issuing bodies, dates\n- Capture high-res proof screenshots"]
     
-    S3 --> S4["Stage 4: Volunteering & Leadership (/details/volunteering-experiences/)\n• Navigate to volunteering sub-page\n• Catalog student ambassador & community roles\n• Quantify leadership impact (e.g., students mentored)"]
+    S3 --> S4["Stage 4: Volunteering and Leadership (/details/volunteering-experiences/)\n- Navigate to volunteering sub-page\n- Catalog student ambassador and community roles\n- Quantify leadership impact (e.g., students mentored)"]
     
-    S4 --> S5["Stage 5: Certifications & Badges (/details/certifications/)\n• Verify cloud & industry certifications (AWS, GCP, Red Hat)\n• Record verification IDs & issue dates"]
+    S4 --> S5["Stage 5: Certifications and Badges (/details/certifications/)\n- Verify cloud and industry certifications (AWS, GCP, Red Hat)\n- Record verification IDs and issue dates"]
     
-    S5 --> SYNTH["Synthesis & Artifacts Generation\n• Compile manifest.json\n• Generate portfolio.html & portfolio.md\n• Generate hkust_cs_recommendation_letter.md\n• Format 4-page admissions supporting document (PDF/DOCX)"]
+    S5 --> SYNTH["Synthesis and Artifacts Generation\n- Compile manifest.json\n- Generate portfolio.html and portfolio.md\n- Generate hkust_cs_recommendation_letter.md\n- Format 4-page admissions supporting document (PDF/DOCX)"]
     
-    SYNTH --> DONE(["Finish: Autonomous Run Complete"])
+    SYNTH --> DONE["Finish: Autonomous Run Complete"]
 ```
 
 1. **Stage 1 (Main Profile & Featured)**: Scans profile headline, About section, featured projects, and top skills.
@@ -370,7 +370,7 @@ For educators, admissions officers, and engineering team leads, AutoFolio provid
 
 ```mermaid
 flowchart TD
-    INPUT["students.txt\nName | https://www.linkedin.com/in/..."] --> BATCH["AutoFolio Batch Controller\n(build_portfolio.py --profiles-file)"]
+    INPUT["students.txt\nName - https://www.linkedin.com/in/..."] --> BATCH["AutoFolio Batch Controller\n(build_portfolio.py --profiles-file)"]
     
     subgraph CohortLoop["Cohort Iteration Loop"]
         BATCH --> P1["Student 1: Esther Cheung"]
@@ -379,12 +379,12 @@ flowchart TD
     end
 
     subgraph PerStudentArtifacts["Per-Student Dedicated Repositories"]
-        P1 --> D1["class_portfolios/esther-cheung/\n• portfolio.html & .md\n• hkust_cs_recommendation_letter.md\n• screenshots/ & images/\n• manifest.json"]
-        P2 --> D2["class_portfolios/alex-wong/\n• portfolio.html & .md\n• recommendation_letter.md\n• screenshots/ & images/"]
-        P3 --> D3["class_portfolios/chloe-chan/\n• portfolio.html & .md\n• recommendation_letter.md\n• screenshots/ & images/"]
+        P1 --> D1["class_portfolios/esther-cheung/\n- portfolio.html and .md\n- hkust_cs_recommendation_letter.md\n- screenshots/ and images/\n- manifest.json"]
+        P2 --> D2["class_portfolios/alex-wong/\n- portfolio.html and .md\n- recommendation_letter.md\n- screenshots/ and images/"]
+        P3 --> D3["class_portfolios/chloe-chan/\n- portfolio.html and .md\n- recommendation_letter.md\n- screenshots/ and images/"]
     end
 
-    D1 --> DASH["Master Class Dashboard Generator\n(class_portfolios/index.html & index.md)"]
+    D1 --> DASH["Master Class Dashboard Generator\n(class_portfolios/index.html and index.md)"]
     D2 --> DASH
     D3 --> DASH
     DASH --> VIEW["Educator Review & One-Click PDF Export"]
