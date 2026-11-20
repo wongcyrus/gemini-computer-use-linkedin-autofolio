@@ -7,7 +7,8 @@ canonical_url: https://github.com/wongcyrus/gemini-computer-use-linkedin-autofol
 cover_image: https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/devto_cover.png
 ---
 
-*Author: **Cyrus Wong** — AWS Hero / Educator / Tech Innovator. Published under the **Google Developer Expert (GDE) / Google Cloud** community blog series.*
+*Author: **Cyrus Wong** — AWS Hero / Educator / Tech Innovator. Published under the **Google Developer Expert (GDE) / Google Cloud** community blog series.*  
+*Case Study Contributor & Credits: **Hiu Tung Cheung (Esther / 張曉彤)** — **GDG on Campus Lead at HKIIT** (Higher Diploma in Cloud and Data Centre Administration).*
 
 ---
 
@@ -396,7 +397,7 @@ As an educator (Senior Lecturer at HKIIT / IVE Lee Wai Lee, Hong Kong), I write 
 
 Traditional recommendation letters suffer from a common flaw: they rely on vague adjectives (*"hardworking"*, *"passionate"*) because teachers don't have time to dig through 3 years of extracurricular activities.
 
-We ran AutoFolio on the profile of **Hiu Tung Cheung (Esther / 張曉彤)**, an outstanding Cloud & Data Centre Administration student with a **3.91 / 4.0 CGPA** applying for **HKUST BEng in Computer Science**.
+We ran AutoFolio on the profile of **Hiu Tung Cheung (Esther / 張曉彤)**, an outstanding student leader serving as the **GDG on Campus Lead at HKIIT** (Hong Kong Institute of Information Technology), who maintains a stellar **3.91 / 4.0 CGPA** in Cloud & Data Centre Administration while applying for **HKUST BEng in Computer Science**.
 
 ### Sample Verified Evidence Captured Autonomously by Gemini Computer Use
 
@@ -508,6 +509,12 @@ Start-Process .\portfolio\portfolio.html
 2. **Hybrid Tooling is the Winning Pattern**: Native GUI actions provide universal web navigation, while custom functions allow your Python code to inject precise DOM scripts, extract media, and persist structured state.
 3. **Security First**: Always enable `enable_prompt_injection_detection=True` when dealing with user-generated content from the web to safeguard your agent workflows.
 4. **Social Good & Education**: Autonomous agents can remove administrative friction from education and hiring, ensuring that students and candidates are judged on their verified, concrete achievements.
+
+---
+
+## Acknowledgments & Credits
+
+Special credit and gratitude to **Hiu Tung Cheung (Esther / 張曉彤)** — **GDG on Campus Lead at HKIIT** — for co-developing community initiatives, testing early iterations of AutoFolio, and graciously providing her rich profile data, conference talks, and community achievements as our live benchmark case study. Her leadership bridging Google Developer Groups (GDG) with campus learning embodies the collaborative spirit of the Google developer community.
 
 ---
 
