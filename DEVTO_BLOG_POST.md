@@ -252,9 +252,7 @@ flowchart LR
 
 The mathematical transformation is clean and reliable:
 
-$$\text{pixel\_x} = \frac{\text{normalized\_x} \times \text{viewport\_width}}{1000}$$
-
-$$\text{pixel\_y} = \frac{\text{normalized\_y} \times \text{viewport\_height}}{1000}$$
+![Gemini Coordinate Denormalization Formula](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/coordinate_formula.png)
 
 This ensures that whether you run on a 1080p desktop, a 4K monitor, or a scaled cloud container, Gemini's visual actions hit the exact target buttons without resolution calibration drift.
 
