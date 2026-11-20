@@ -3,8 +3,13 @@
 [![Google Cloud](https://img.shields.io/badge/Google%20Cloud-Gemini%20Computer%20Use-4285F4?logo=googlecloud&logoColor=white)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computer-use)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Playwright](https://img.shields.io/badge/Playwright-CDP%20Attach-2EAD33?logo=playwright&logoColor=white)](https://playwright.dev/)
+[![Dev.to Article](https://img.shields.io/badge/dev.to-GDE%20Blog%20Post-0A0A0A?logo=devdotto&logoColor=white)](DEVTO_BLOG_POST.md)
+
+![Gemini Computer Use LinkedIn AutoFolio Cover](assets/devto_cover.png)
 
 **Gemini Computer Use LinkedIn AutoFolio** is an autonomous browser agent powered by the [Google Gen AI SDK (`google-genai`) Computer Use tool](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computer-use) and **Playwright CDP Attach**.
+
+> 📖 **Read the in-depth Google Developer Expert / Google Cloud blog post:** **[Building an Autonomous LinkedIn Portfolio & Recommendation Agent with Gemini Computer Use on Google Cloud (DEVTO_BLOG_POST.md)](DEVTO_BLOG_POST.md)**
 
 Instead of relying on static PDF resumes or shallow profile scrapes, **AutoFolio** attaches directly to your **already logged-in Chrome browser** (`DevToolsActivePort`), visually navigates a candidate or student's **LinkedIn profile and sub-pages** (Activity posts, Honors & Scholarships, Publications, Volunteering, Certifications), clicks *"…more"*, captures verified screenshot proof, downloads event/project photos, and synthesizes:
 

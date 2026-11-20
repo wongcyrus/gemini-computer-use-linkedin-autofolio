@@ -4,12 +4,14 @@ published: false
 description: Learn how to harness Gemini 3.8 Flash Computer Use on Vertex AI with Playwright CDP attach to build an autonomous agent that navigates authenticated web sessions and generates evidence-backed portfolios.
 tags: googlecloud, gemini, ai, python
 canonical_url: https://github.com/wongcyrus/gemini-computer-use-linkedin-autofolio
-cover_image: https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/portfolio/screenshots/01_profile_header_Esther_Cheung_-_LinkedIn_Profile_Header_About_Featured.png
+cover_image: https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/devto_cover.png
 ---
 
 *Author: **Cyrus Wong** — AWS Hero / Educator / Tech Innovator. Published under the **Google Developer Expert (GDE) / Google Cloud** community blog series.*
 
 ---
+
+![Building an Autonomous LinkedIn Portfolio & Recommendation Agent with Gemini Computer Use on Google Cloud](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/devto_cover.png)
 
 ## The Promise and the Pitfall of "Computer Use"
 
@@ -34,23 +36,94 @@ In this deep dive, I'll walk through the architecture, Google Cloud configuratio
 
 ---
 
-## Solution Architecture
+## High-Level Solution Architecture
 
-Here is how the system orchestrates Vertex AI, Chrome DevTools Protocol, and Playwright:
+Here is the end-to-end architecture of AutoFolio, showing how Vertex AI, Chrome DevTools Protocol, and Playwright work in concert:
+
+![Gemini Computer Use + Chrome CDP Attach Architecture on Google Cloud](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/architecture_infographic.png)
 
 ```mermaid
 flowchart TD
-    A["Active Logged-In Google Chrome\n(User profile with 2FA / Session Active)"] -->|DevToolsActivePort\nWebSocket Discovery| B["Playwright CDP Session\n(Zero Login / Zero Friction)"]
-    B -->|Base64 Viewport Screenshot| C["Google Cloud Vertex AI\n(gemini-3.8-flash)"]
-    C -->|Reasoning & Tool Calls| D{"Agent Decision Engine"}
-    D -->|Native GUI Actions| E["ComputerUse Tool\n(click, scroll, type, wait, navigate)"]
-    D -->|Custom Function Calls| F["AutoFolio Domain Tools\n(save_evidence_screenshot, extract_and_save_page_images, record_portfolio_item)"]
-    E -->|Executes in Chrome| B
-    F -->|Persists Evidence| G["Portfolio Artifacts Engine"]
-    G --> H1["portfolio.html & portfolio.md"]
-    G --> H2["Recommendation Letter (.md)"]
-    G --> H3["4-Page Supporting Doc (PDF/DOCX)"]
-    G --> H4["Class Dashboard (index.html)"]
+    subgraph BrowserEnvironment["🖥️ Local Client Environment"]
+        A["Active Google Chrome Browser\n(Authenticated Session, Cookies, 2FA Active)"]
+        DT["DevToolsActivePort\n(%LOCALAPPDATA%/.../DevToolsActivePort)"]
+        PW["Playwright CDP Bridge\n(connect_over_cdp ws://127.0.0.1:port/...)"]
+        A -->|Writes Port & GUID| DT
+        DT -->|WebSocket URL Discovery| PW
+        PW -->|Attaches to Active Tab| A
+    end
+
+    subgraph GoogleCloud["☁️ Google Cloud Vertex AI"]
+        ADC["Google Cloud IAM / ADC\n(gcloud auth application-default login)"]
+        SDK["Google Gen AI SDK (google-genai)\n(Client vertexai=True, location='global')"]
+        MODEL["Gemini 3.8 Flash (Computer Use Model)\n(Spatial Reasoning, Prompt Injection Detection)"]
+        ADC --> SDK --> MODEL
+    end
+
+    subgraph AgentLoop["🔄 Hybrid Agent Execution Loop"]
+        SCREEN["1. Viewport Base64 Screenshot"]
+        DECISION{"2. Gemini Multi-Modal Decision"}
+        NATIVE["3a. Native ComputerUse Actions\n(click_at, scroll_page, type_text, wait)"]
+        CUSTOM["3b. Custom Domain Tools\n(save_evidence_screenshot, extract_and_save_page_images)"]
+        
+        PW -->|Capture| SCREEN --> MODEL --> DECISION
+        DECISION --> NATIVE -->|Mouse & Keyboard Commands| PW
+        DECISION --> CUSTOM -->|DOM Injection & File I/O| ARTIFACTS
+    end
+
+    subgraph ARTIFACTS["📁 Generated Showcase Artifacts"]
+        ART1["Interactive HTML Portfolio\n(portfolio.html & portfolio.md)"]
+        ART2["Evidence-Backed Rec Letter\n(hkust_cs_recommendation_letter.md)"]
+        ART3["4-Page Admissions Dossier\n(supporting_doc.pdf & docx)"]
+        ART4["Consolidated Class Dashboard\n(class_portfolios/index.html)"]
+    end
+```
+
+---
+
+## Agent Execution Loop: Step-by-Step Sequence
+
+To understand how Gemini Computer Use iteratively interacts with the browser, here is the full execution loop sequence diagram:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as Educator / Developer
+    participant Script as build_portfolio.py
+    participant Chrome as Active Chrome Tab
+    participant VertexAI as Google Cloud Vertex AI (Gemini 3.8 Flash)
+    participant Disk as Local File System (portfolio/)
+
+    User->>Script: Run with --profile-url or --profiles-file
+    Script->>Chrome: Discover DevToolsActivePort & Attach via CDP
+    Chrome-->>Script: CDP WebSocket Connection Established
+    
+    loop 5-Stage Autonomous Traversal
+        Script->>Chrome: Capture Current Viewport (Base64 JPEG)
+        Chrome-->>Script: Viewport Image (1280x800)
+        Script->>VertexAI: generate_content(Image + History + Tools)
+        Note over VertexAI: Spatial UI Understanding & Prompt Injection Defense
+        VertexAI-->>Script: Tool Call Decision (click_at / custom function)
+        
+        alt Native Computer Use Tool Call
+            Script->>Script: Denormalize Coordinates (0..1000 -> 1280x800 px)
+            Script->>Chrome: page.mouse.click(pixel_x, pixel_y) / page.mouse.wheel()
+            Chrome-->>Script: DOM Updates & Navigation
+        else Custom Function: save_evidence_screenshot
+            Script->>Chrome: Capture Full-Res Element / Crop Screenshot
+            Script->>Disk: Save to portfolio/screenshots/*.png
+            Script-->>VertexAI: FunctionResponse(status="saved", file_path=...)
+        else Custom Function: extract_and_save_page_images
+            Script->>Chrome: Evaluate DOM script to find high-res post images
+            Script->>Disk: Download to portfolio/images/*.jpg
+            Script-->>VertexAI: FunctionResponse(extracted_count=N)
+        end
+    end
+
+    Script->>VertexAI: Request Final Synthesis (Markdown & Letter)
+    VertexAI-->>Script: Formatted Portfolio, Rec Letter & 4-Page Dossier
+    Script->>Disk: Write portfolio.html, recommendation_letter.md, manifest.json
+    Script-->>User: Open portfolio.html in Browser
 ```
 
 ---
@@ -105,7 +178,7 @@ computer_use_tool = types.Tool(
 )
 ```
 
-Setting `enable_prompt_injection_detection=True` is critical when your agent navigates public user-generated content on platforms like LinkedIn, protecting your agent from adversarial prompts hidden in profile bios or posts.
+> **Security Tip**: Setting `enable_prompt_injection_detection=True` is critical when your agent navigates public user-generated content on platforms like LinkedIn, protecting your agent from adversarial prompts hidden in profile bios or posts.
 
 ---
 
@@ -165,15 +238,65 @@ Zero re-login, zero 2FA prompts, zero cookies written to disk. The agent inherit
 
 ---
 
-## 3. Hybrid Tool Calling: Combining Computer Use with Custom Functions
+## 3. Coordinate Normalization & Denormalization Pipeline
+
+One of the most elegant architectural choices in Gemini Computer Use is its resolution-independent coordinate system. Gemini's visual perception engine processes all screenshots on a normalized `[0, 1000]` grid:
+
+```mermaid
+flowchart LR
+    A["Raw Viewport Screenshot\n(e.g., 1280 x 800 px)"] -->|Sent to Gemini| B["Gemini 3.8 Flash Vision Encoder\n(Normalized Grid: [0, 1000] x [0, 1000])"]
+    B -->|Predicts Action Target| C["Normalized Coordinate Output\n(e.g., x: 450, y: 320)"]
+    C -->|Denormalization Formula| D["Denormalizer Engine\nx = 450 * 1280 / 1000 = 576 px\ny = 320 * 800 / 1000 = 256 px"]
+    D -->|Executes Playwright Action| E["Chrome Mouse / Click Dispatch\npage.mouse.click(576, 256)"]
+```
+
+The mathematical transformation is clean and reliable:
+
+$$\text{pixel\_x} = \frac{\text{normalized\_x} \times \text{viewport\_width}}{1000}$$
+
+$$\text{pixel\_y} = \frac{\text{normalized\_y} \times \text{viewport\_height}}{1000}$$
+
+This ensures that whether you run on a 1080p desktop, a 4K monitor, or a scaled cloud container, Gemini's visual actions hit the exact target buttons without resolution calibration drift.
+
+---
+
+## 4. Hybrid Tool Calling Architecture: Dual-Dispatch Engine
 
 One of the most powerful features of Gemini on Google Cloud is **Hybrid Tool Calling**: you don't have to choose between visual Computer Use or function calling. You can give the model **both** in the exact same prompt configuration!
 
-In AutoFolio, Gemini uses:
-1. **`computer_use`**: Native GUI actions (`click_at`, `scroll_page`, `type_text_at`, `navigate`, `wait_5_seconds`).
-2. **`save_evidence_screenshot`**: Custom function to crop and store timestamped visual proof of awards, scholarships, and conference talks.
-3. **`extract_and_save_page_images`**: Custom function to scrape high-res event photos directly from post attachments via DOM injection.
-4. **`record_portfolio_item`**: Custom function to append structured data into `manifest.json`.
+```mermaid
+flowchart TD
+    MODEL["Gemini 3.8 Flash on Vertex AI"] -->|Generates Model Turn| CANDIDATE{"Inspect Candidate FunctionCall"}
+    
+    subgraph NativeComputerUse["🌐 Native ComputerUse Tool (types.ComputerUse)"]
+        CANDIDATE -->|click_at(x, y)| CU_CLICK["Translate (x,y) & page.mouse.click()"]
+        CANDIDATE -->|scroll_page(direction)| CU_SCROLL["page.mouse.wheel(0, dy)"]
+        CANDIDATE -->|type_text_at(text, x, y)| CU_TYPE["page.mouse.click() & page.keyboard.type()"]
+        CANDIDATE -->|navigate(url)| CU_NAV["page.goto(url, wait_until='domcontentloaded')"]
+        CANDIDATE -->|wait_5_seconds()| CU_WAIT["page.wait_for_timeout(5000)"]
+    end
+
+    subgraph CustomDomainTools["🛠️ Custom AutoFolio Tools (FunctionDeclaration)"]
+        CANDIDATE -->|save_evidence_screenshot(label, category)| CT_SHOT["Capture high-res proof, watermark, & catalog"]
+        CANDIDATE -->|extract_and_save_page_images(category)| CT_IMG["DOM evaluate <img> tags, download media files"]
+        CANDIDATE -->|record_portfolio_item(item_data)| CT_ITEM["Append structured JSON record to manifest.json"]
+        CANDIDATE -->|yield_to_user(message)| CT_HITL["Pause for Human-in-the-Loop review"]
+    end
+
+    CU_CLICK --> SYNC["Synchronize Browser State & Next Viewport"]
+    CU_SCROLL --> SYNC
+    CU_TYPE --> SYNC
+    CU_NAV --> SYNC
+    CU_WAIT --> SYNC
+    CT_SHOT --> SYNC
+    CT_IMG --> SYNC
+    CT_ITEM --> SYNC
+    CT_HITL --> SYNC
+    
+    SYNC -->|Send FunctionResponse + New Screenshot| MODEL
+```
+
+### Passing Both Tools to `generate_content`
 
 ```python
 # Pass both Computer Use and your custom tool definitions
@@ -210,29 +333,27 @@ for candidate in response.candidates:
                 result = extract_page_images(page, fn_args["category"])
 ```
 
-### Coordinate Normalization Note
-
-Gemini Computer Use outputs coordinates normalized between `0` and `1000` regardless of the physical resolution. Translating them to Playwright is a simple denormalization formula:
-
-$$\text{pixel\_x} = \frac{\text{normalized\_x} \times \text{viewport\_width}}{1000}$$
-
-$$\text{pixel\_y} = \frac{\text{normalized\_y} \times \text{viewport\_height}}{1000}$$
-
 ---
 
-## 4. Multi-Stage Autonomous Workflow: Turning Activity into Grounded Evidence
+## 5. Multi-Stage Autonomous Workflow: Turning Activity into Grounded Evidence
 
 Rather than letting an agent roam aimlessly, AutoFolio runs a disciplined **5-stage exploration pipeline**:
 
 ```mermaid
-stateDiagram-v2
-    [*] --> Stage1_ProfileHeader
-    Stage1_ProfileHeader --> Stage2_ActivityPosts : Navigates to /recent-activity/all/
-    Stage2_ActivityPosts --> Stage3_Honors : Navigates to /details/honors/
-    Stage3_Honors --> Stage4_Volunteering : Navigates to /details/volunteering-experiences/
-    Stage4_Volunteering --> Stage5_Certifications : Navigates to /details/certifications/
-    Stage5_Certifications --> Synthesis_Engine : Compiles Evidence
-    Synthesis_Engine --> [*]
+flowchart TD
+    START(["Start: Profile URL Loaded"]) --> S1["Stage 1: Main Profile & Featured\n• Headline, About, Education, Skills\n• Featured Projects & GitHub Links\n• Capture Profile Header Screenshot"]
+    
+    S1 --> S2["Stage 2: Recent Activity Posts (/recent-activity/all/)\n• Visually scan timeline posts\n• Click '...see more' on truncated posts\n• Identify conference talks, hackathons, open source\n• Extract & download embedded event photos"]
+    
+    S2 --> S3["Stage 3: Honors & Scholarships (/details/honors/)\n• Navigate to dedicated honors sub-page\n• Record award titles, issuing bodies, dates\n• Capture high-res proof screenshots"]
+    
+    S3 --> S4["Stage 4: Volunteering & Leadership (/details/volunteering-experiences/)\n• Navigate to volunteering sub-page\n• Catalog student ambassador & community roles\n• Quantify leadership impact (e.g., students mentored)"]
+    
+    S4 --> S5["Stage 5: Certifications & Badges (/details/certifications/)\n• Verify cloud & industry certifications (AWS, GCP, Red Hat)\n• Record verification IDs & issue dates"]
+    
+    S5 --> SYNTH["Synthesis & Artifacts Generation\n• Compile manifest.json\n• Generate portfolio.html & portfolio.md\n• Generate hkust_cs_recommendation_letter.md\n• Format 4-page admissions supporting document (PDF/DOCX)"]
+    
+    SYNTH --> DONE(["Finish: Autonomous Run Complete"])
 ```
 
 1. **Stage 1 (Main Profile & Featured)**: Scans profile headline, About section, featured projects, and top skills.
@@ -243,7 +364,35 @@ stateDiagram-v2
 
 ---
 
-## 5. Real-World Case Study: AutoFolio in Action
+## 6. Batch Class Processing Architecture
+
+For educators, admissions officers, and engineering team leads, AutoFolio provides an automated batch runner that reads student links from a text file (`students.txt`) and synthesizes an entire cohort in one command:
+
+```mermaid
+flowchart TD
+    INPUT["students.txt\nName | https://www.linkedin.com/in/..."] --> BATCH["AutoFolio Batch Controller\n(build_portfolio.py --profiles-file)"]
+    
+    subgraph CohortLoop["Cohort Iteration Loop"]
+        BATCH --> P1["Student 1: Esther Cheung"]
+        BATCH --> P2["Student 2: Alex Wong"]
+        BATCH --> P3["Student 3: Chloe Chan"]
+    end
+
+    subgraph PerStudentArtifacts["Per-Student Dedicated Repositories"]
+        P1 --> D1["class_portfolios/esther-cheung/\n• portfolio.html & .md\n• hkust_cs_recommendation_letter.md\n• screenshots/ & images/\n• manifest.json"]
+        P2 --> D2["class_portfolios/alex-wong/\n• portfolio.html & .md\n• recommendation_letter.md\n• screenshots/ & images/"]
+        P3 --> D3["class_portfolios/chloe-chan/\n• portfolio.html & .md\n• recommendation_letter.md\n• screenshots/ & images/"]
+    end
+
+    D1 --> DASH["Master Class Dashboard Generator\n(class_portfolios/index.html & index.md)"]
+    D2 --> DASH
+    D3 --> DASH
+    DASH --> VIEW["Educator Review & One-Click PDF Export"]
+```
+
+---
+
+## 7. Real-World Case Study: AutoFolio in Action
 
 As an educator (Senior Lecturer at HKIIT / IVE Lee Wai Lee, Hong Kong), I write dozens of university recommendation letters every year for students transferring into elite Bachelor of Engineering programs (like **HKUST Computer Science**).
 
@@ -265,7 +414,7 @@ We ran AutoFolio on the profile of **Hiu Tung Cheung (Esther)**, an outstanding 
 
 ---
 
-## 6. How to Run It in Your Own Environment
+## 8. How to Run It in Your Own Environment
 
 You can try this today on your machine with Google Cloud Vertex AI:
 
