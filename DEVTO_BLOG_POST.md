@@ -43,13 +43,15 @@ Here is the end-to-end architecture of AutoFolio, showing how Vertex AI, Chrome 
 
 ![Gemini Computer Use + Chrome CDP Attach Architecture on Google Cloud](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/architecture_infographic.png)
 
+![Google Cloud End-to-End System Architecture](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/google_diagram1_system_architecture.png)
+
 ---
 
 ## Agent Execution Loop: Step-by-Step Sequence
 
 To understand how Gemini Computer Use iteratively interacts with the browser, here is the full execution loop sequence:
 
-![Gemini Computer Use Agent Execution Loop Sequence](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/diagram_sequence_loop.png)
+![Gemini Computer Use Agent Execution Loop Sequence](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/google_diagram2_execution_sequence.png)
 
 ---
 
@@ -167,7 +169,7 @@ Zero re-login, zero 2FA prompts, zero cookies written to disk. The agent inherit
 
 One of the most elegant architectural choices in Gemini Computer Use is its resolution-independent coordinate system. Gemini's visual perception engine processes all screenshots on a normalized `[0, 1000]` grid:
 
-![Coordinate Normalization and Denormalization Pipeline](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/diagram_coordinate_pipeline.png)
+![Coordinate Normalization and Denormalization Pipeline](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/google_diagram3_coordinate_pipeline.png)
 
 This ensures that whether you run on a 1080p desktop, a 4K monitor, or a scaled cloud container, Gemini's visual actions hit the exact target buttons without resolution calibration drift.
 
@@ -177,7 +179,7 @@ This ensures that whether you run on a 1080p desktop, a 4K monitor, or a scaled 
 
 One of the most powerful features of Gemini on Google Cloud is **Hybrid Tool Calling**: you don't have to choose between visual Computer Use or function calling. You can give the model **both** in the exact same prompt configuration!
 
-![Hybrid Tool Calling Dual-Dispatch Engine](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/diagram_hybrid_tools.png)
+![Hybrid Tool Calling Dual-Dispatch Engine](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/google_diagram4_hybrid_tools.png)
 
 ### Passing Both Tools to `generate_content`
 
@@ -222,7 +224,7 @@ for candidate in response.candidates:
 
 Rather than letting an agent roam aimlessly, AutoFolio runs a disciplined **5-stage exploration pipeline**:
 
-![5-Stage LinkedIn Deep Exploration Pipeline](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/diagram_linkedin_stages.png)
+![5-Stage LinkedIn Deep Exploration Pipeline](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/google_diagram5_linkedin_stages.png)
 
 1. **Stage 1 (Main Profile & Featured)**: Scans profile headline, About section, featured projects, and top skills.
 2. **Stage 2 (Recent Activity & Posts)**: Visits `/recent-activity/all/`, scrolls down, expands *"…see more"*, captures conference speaking announcements, hackathon podium finishes, and extracts embedded event photos.
@@ -236,7 +238,7 @@ Rather than letting an agent roam aimlessly, AutoFolio runs a disciplined **5-st
 
 For educators, admissions officers, and engineering team leads, AutoFolio provides an automated batch runner that reads student links from a text file (`students.txt`) and synthesizes an entire cohort in one command:
 
-![Batch Class Processing Architecture](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/diagram_class_batch.png)
+![Batch Class Processing Architecture](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/assets/google_diagram6_class_batch.png)
 
 ---
 
