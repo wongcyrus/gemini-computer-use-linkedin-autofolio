@@ -13,6 +13,19 @@ chrome_profile/
 browser_profile/
 esther_profile_summary.md
 
+# Security, Credentials & Local Auth
+*.env
+*.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+*client_secret*.json
+authorized_user.json
+token.json
+DevToolsActivePort
+
 # IDE / OS
 .vscode/
 .idea/
