@@ -398,19 +398,48 @@ As an educator (Senior Lecturer at HKIIT / IVE Lee Wai Lee, Hong Kong), I write 
 
 Traditional recommendation letters suffer from a common flaw: they rely on vague adjectives (*"hardworking"*, *"passionate"*) because teachers don't have time to dig through 3 years of extracurricular activities.
 
-We ran AutoFolio on the profile of **Hiu Tung Cheung (Esther)**, an outstanding Cloud & Data Centre Administration student with a 3.91 CGPA applying for HKUST CS.
+We ran AutoFolio on the profile of **Hiu Tung Cheung (Esther / 張曉彤)**, an outstanding Cloud & Data Centre Administration student with a **3.91 / 4.0 CGPA** applying for **HKUST BEng in Computer Science**.
 
-### What Gemini Discovered Autonomously:
-- **Conference Speaker**: Traced her verified announcement as a speaker at **PyCon Hong Kong 2026** presenting *"Kubernetes Game Server Orchestration with Agones on Google Cloud"*.
-- **Tech Community Leadership**: Identified her role organizing workshops across Red Hat, AWS, and Google Developer Groups (GDG), mentoring over 300 junior students.
-- **Top Scholarships**: Documented her HKSAR Government Talent Development Scholarship and Vocational Training Council Excellence Awards.
-- **Hands-On Architecture**: Cataloged her open-source full-stack projects combining generative AI, Cloudflare Workers, and multi-cloud infrastructure.
+### Sample Verified Evidence Captured Autonomously by Gemini Computer Use
 
-### The Generated Deliverables:
-1. **Interactive Visual Portfolio (`portfolio.html`)**: Complete with hero badges, category filters, high-resolution event photos, and clickable verified screenshot modals.
-2. **HKUST CS Recommendation Letter (`hkust_cs_recommendation_letter.md`)**: A rigorous 1,200-word recommendation structured across Academic Aptitude, Cloud Systems Architecture, Community Leadership, and Personal Motivation.
-3. **4-Page Supporting Document (PDF / DOCX)**: Formatted in an executive 2-column layout (visual evidence on the left, architectural verification on the right) ready for university admissions portals.
-4. **Class Dashboard**: When run with `--profiles-file students.txt`, AutoFolio loops through the entire class and produces a unified dashboard with quick links to every student's portfolio and recommendation.
+During its 5-stage traversal, Gemini autonomously inspected her LinkedIn profile, clicked *"…see more"*, captured high-resolution screenshot proofs, and downloaded original event media:
+
+| Profile & Featured Header | PyCon HK 2026 Speaker Announcement |
+| :---: | :---: |
+| ![Profile Header](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/portfolio/screenshots/01_profile_header_Esther_Cheung_-_LinkedIn_Profile_Header_About_Featured.png) | ![PyCon HK 2026](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/portfolio/screenshots/04_conference_talk_PyCon_Hong_Kong_2026_Speaker_Announcement_-_Kubernetes_Game_.png) |
+
+| Honors & Scholarships (`details/honors/`) | Volunteering & Leadership (`details/volunteering-experiences/`) |
+| :---: | :---: |
+| ![Honors & Scholarships](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/portfolio/screenshots/05_scholarship_award_Honors_Awards_Page_-_Section_1.png) | ![Volunteering & Leadership](https://raw.githubusercontent.com/wongcyrus/gemini-computer-use-linkedin-autofolio/main/portfolio/screenshots/08_leadership_Volunteering_Leadership_-_Red_Hat_AWS_Leader_GDG_Leader.png) |
+
+---
+
+### What Gemini Discovered and Synthesized Autonomously:
+
+1. **Pioneering Tech Community Leadership**:
+   - Traced her concurrent roles as Hong Kong's 1st Red Hat Student Ambassador, 1st AWS Student Builder Group Leader '26, and Google Developer Group (GDG) on Campus Leader.
+   - Identified her community volunteer work teaching elderly citizens generative AI applications with CLP Power Hong Kong.
+
+2. **Public Conference Speaking & Tech Evangelism**:
+   - Verified her speaking engagement at **PyCon Hong Kong 2026** presenting *「從港域時空到 Kubernetes: 將香港遊戲世界化身雲原生學習平台」 (From Hong Kong Zero to Kubernetes)*.
+   - Documented project demos presented to Microsoft Hong Kong and VTC leadership at the MoU Signing Ceremony.
+
+3. **Academic Diligence & Honors**:
+   - Verified her **CGPA of 3.91 / 4.0**, Cathay Group Scholarship 2025/26, and Lei Foundation Scholarship.
+   - Cataloged 1st Prize and Outstanding Teamwork awards at the Greater Bay Area IT Application System Development Competition.
+   - Verified 16 industry credentials spanning AWS, Google Cloud (GKE badges), and Red Hat OpenShift.
+
+---
+
+### Live Deliverables Generated in the Repository
+
+You can view the full live artifacts generated during this run directly in the repository:
+
+- 📄 **[Evidence-Backed HKUST CS Recommendation Letter](https://github.com/wongcyrus/gemini-computer-use-linkedin-autofolio/blob/main/portfolio/hkust_cs_recommendation_letter.md)**: A grounded, professional 1,200-word recommendation letter with structured admissions rubrics.
+- 🌐 **[Generated Visual HTML Portfolio](https://github.com/wongcyrus/gemini-computer-use-linkedin-autofolio/blob/main/portfolio/portfolio.html)**: Interactive portfolio with hero badges, category filters, and screenshot proof modals.
+- 📝 **[Generated Markdown Portfolio](https://github.com/wongcyrus/gemini-computer-use-linkedin-autofolio/blob/main/portfolio/portfolio.md)**: Clean, portable documentation ready for static site generators.
+- 📊 **[Structured Manifest (`manifest.json`)](https://github.com/wongcyrus/gemini-computer-use-linkedin-autofolio/blob/main/portfolio/manifest.json)**: Machine-readable JSON cataloging all traced achievements, issuing bodies, dates, and media paths.
+- 🎓 **[Consolidated Class Dashboard](https://github.com/wongcyrus/gemini-computer-use-linkedin-autofolio/blob/main/README.md#a-run-for-an-entire-class-from-a-text-file---profiles-file-studentstxt)**: Multi-student cohort index generated when running with `--profiles-file students.txt`.
 
 ---
 
